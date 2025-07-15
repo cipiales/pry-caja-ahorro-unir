@@ -2,7 +2,7 @@ import { HttpClient, HttpRequest, HttpEventType, HttpResponse, HttpHeaders } fro
 import { Component, OnInit } from '@angular/core';
 //import { Config } from 'app/shared/config/config';
 //import { FileService } from 'app/services/file.service';
-import * as fileSaver from 'file-saver';
+//import * as fileSaver from 'file-saver';
 import {TooltipPosition} from '@angular/material/tooltip';
 import {FormControl} from '@angular/forms';
 //import { DetalleArchivoSalida, RespuestasEjecucion } from 'app/models/detalle-archivo-salida';
@@ -184,8 +184,8 @@ validarFecha ( formatoDia:string,formatoMes:string,formatoAno:string) {
     dercargarFile(fileUrl:string,fileUrl1:string,myFileName:string,myFileName1:string, response:Blob) {
         let blob:any = new Blob([response], { type: 'application/octet-stream' });
         const url = window.URL.createObjectURL(blob);
-        fileSaver.saveAs(this.fileUrl, this.myFileName);
-        fileSaver.saveAs(this.fileUrl1, this.myFileName1);
+       // fileSaver.saveAs(this.fileUrl, this.myFileName);
+        //fileSaver.saveAs(this.fileUrl1, this.myFileName1);
         this.mensajedescargaInstructivo();
     }
 

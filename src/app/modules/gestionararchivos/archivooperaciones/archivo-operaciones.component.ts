@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 //import { Config } from 'app/shared/config/config';
 import { ViewChild,ElementRef } from '@angular/core';
 //import { FileService } from 'app/services/file.service';
-import * as fileSaver from 'file-saver';
+//import * as fileSaver from 'file-saver';
 import { RegistrarEventoService } from '../../../shared/services/registrar-evento.service';
 import {TooltipPosition} from '@angular/material/tooltip';
 import {FormControl} from '@angular/forms';
@@ -180,8 +180,8 @@ if (isNaN(parseInt(formatoDia))||isNaN(parseInt(formatoMes))||  isNaN(parseInt(f
       this.fileService.downloadFile().subscribe((response: any) => { //when you use stricter type checking
         let blob:any = new Blob([response], { type: 'application/octet-stream' });
         const url = window.URL.createObjectURL(blob);
-        fileSaver.saveAs(this.fileUrl1, this.myFileName1);
-        fileSaver.saveAs(this.fileUrl, this.myFileName);
+        //fileSaver.saveAs(this.fileUrl1, this.myFileName1);
+        //fileSaver.saveAs(this.fileUrl, this.myFileName);
 
         this.descargaInstructivo();
 
