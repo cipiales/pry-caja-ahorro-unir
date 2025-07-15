@@ -1,0 +1,251 @@
+.via-label-Prelo-Medium {
+    font: 400 1em/1em $primary-font;
+    color: $primary-color;
+}
+
+.via-normal-tittle {
+    font: 400 2.250em/2.250em $primary-font-tittile;
+    color: $primary-color;
+}
+
+.align-center {
+    margin: 0 auto;
+}
+
+// from group
+.bp-form-group {
+    input:focus {
+        ~.image-wrapper {
+            height: 201px;
+            padding: 10px;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+    }
+    .image-wrapper {
+        display: block!important;
+        height: 0px;
+        overflow: hidden;
+        height: 0px;
+        &.showExample {
+            height: 201px;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// date picker css
+.datepicker-wrapper {
+    position: relative;
+    .datepicker-icon {
+        color: $primary-icon-color;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
+// error y warning  css
+.error-wrapper {
+    margin-top: 10px;
+    font: 0.667em/0.667em $primary-error-mesage-font;
+}
+
+.error-msg {
+    color: $primary-color-error;
+    margin-top: 1px;
+}
+
+
+
+
+.mat-dialog-container svg,
+.mat-progress-spinner svg,
+mat-progress-spinner svg {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.spinner-cn .mat-dialog-container svg,
+.spinner-cn .mat-progress-spinner svg,
+.spinner-cn mat-progress-spinner svg {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.mat-progress-spinner svg {
+    position: absolute !important;
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform-origin: center !important;
+    overflow: visible !important;
+}
+
+.spinner-cn mat-progress-spinner.mat-progress-spinner {
+    width: 150px !important;
+    height: 150px !important;
+    top: 150px !important;
+}
+
+.msg-confirm {
+    margin: 0 8px;
+    padding: 1px;
+    border: 1px solid #E8446C;
+    background-color: #FCE3E9;
+    width: 36px;
+    height: 15px;
+    cursor: pointer
+}
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+    stroke: #ffeb3b;
+}
+
+// Redio Button
+.redio-btn-wrapper {
+    width: 33%;
+    display: inline-block;
+}
+
+// tittle
+.nomb-usuario {
+    font-family: "Prelo-Book";
+    width: 15px;
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #0F265C;
+}
+
+// padding
+.pad-comon {
+    padding: 5px;
+}
+
+.padding-inside-form {
+    padding-top: 30px;
+}
+
+// new css
+.no-marginLR {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.table-header {
+    background-color: #eceaea;
+}
+
+.btn-margin-top {
+    margin-top: 28px;
+}
+
+// menu option
+.navigation-container {
+    box-shadow: 2px 0 4px 0 rgba(0, 0, 0, .05), 1px 0 0 0 rgba(16, 38, 92, .04);
+    flex: none;
+    position: fixed;
+    z-index: 90;
+    background: #fff;
+}
+
+.nav-card-body {
+    margin: 0 25px 0 45px;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.nav-card-header {
+    font-family: "Prelo-Book";
+    font-size: 14pt;
+    color: #0F265C;
+    outline: none;
+    background-color: transparent;
+    border: transparent none;
+}
+
+.nav-card-option {
+    width: 100%;
+    font-size: 12pt;
+    font-family: "PREL-M";
+    color: #0F265C;
+    margin-bottom: 0;
+    display: block;
+    font-weight: normal;
+}
+
+.card-header h5:before {
+    width: 0;
+    height: 0;
+    content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+    margin: 0 4px;
+    float: right;
+    margin: 7px;
+    transition: all 0.5s;
+}
+
+.card-header.active h5:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, .32);
+}
+
+.popup-msg-cnt {
+    min-width: 36%;
+    /* max-width: 62%; */
+    padding: 11px;
+    border: 1px solid #FECB2E;
+    margin: 0 auto;
+    border-bottom-left-radius: 15px;
+    background: #ffff;
+    font-size: 16px;
+    color: #0F265C;
+    word-wrap: break-word;
+    top: 38%;
+    position: absolute;
+    left: 39%;
+    background-color: #fff;
+}
+.btn-link {
+    background: transparent;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+.epsSelectorPanel .mat-dialog-container{
+
+    background: none !important;
+    box-shadow: none !important;
+    width: auto !important;
+    min-height: 10px !important;
+  }
+
+
+  .margin-right-0 {
+
+    margin-right: 0px;
+ }

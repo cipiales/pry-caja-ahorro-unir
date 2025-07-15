@@ -1,0 +1,1244 @@
+// Átomos  
+
+    //headdings
+
+        .a_h1{
+           font-family: preloslab-book;
+           font-size: 40px;
+           line-height: 48px;
+           font-weight: 300;
+           color: $azul; 
+        }
+        .a_h2{
+            font-family: preloslab-book;
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: 300;
+            color: $azul; 
+        }
+        .a_h3{
+            font-family: preloslab-book;
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 300;
+            color: $azul; 
+        }
+        .a_h4{
+            font-family: preloslab-book;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 300;
+            color: $azul; 
+        }
+        .a_h5{
+            font-family: preloslab-book;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $azul; 
+        }
+        .a_h6{
+            font-family: preloslab-book;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 500;
+            color: $azul; 
+        }
+        .a_h1-b{
+            font-family: preloslab-book;
+            font-size: 40px;
+            line-height: 48px;
+            font-weight: 600;
+            color: $azul; 
+        }
+        .a_h2-b{
+            font-family: preloslab-book;
+            font-size: 32px;
+            line-height: 38px;
+            font-weight: 600;
+            color: $azul; 
+        }
+        .a_h3-b{
+            font-family: preloslab-book;
+            font-size: 28px;
+            line-height: 34px;
+            font-weight: 600;
+            color: $azul; 
+        }
+        .a_h4-b{
+            font-family: preloslab-book;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 600;
+            color: $azul; 
+        }
+        .a_h5-b{
+            font-family: preloslab-book;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            color: $azul; 
+        }
+        .a_h6-b{
+            font-family: preloslab-book;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 700;
+            color: $azul; 
+        }
+        .a_h-btn{
+            font-family: preloslab-book;
+            font-size: 16px;
+            line-height: 18px;
+            font-weight: 500;
+            color: $azul; 
+        }
+        .a_neoh1{
+            font-family: preloslab-book;
+            font-size: 30px;
+            line-height: 32px;
+            color: $azul; 
+        }
+        .a_neoh2{
+            font-family: preloslab-book;
+            font-size: 20px;
+            line-height: 22px;
+            color: $azul; 
+            font-weight: 500;
+        }
+        .a_neoh3{
+            font-family: prelo-semibold;
+            font-size: 16px;
+            line-height: 18px;
+            color: $azul; 
+        }
+
+    //headdings
+
+    //subheaddings
+
+        .a_s1{
+            font-family: prelo-book;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            color: $azul;
+        }
+        .a_s1-b{
+            font-family: prelo-book;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            color: $azul;
+        }
+    
+    //subheaddings
+
+    //texto
+
+        .a_p1{
+            font-family: prelo-book;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            color: $plomo;
+        }
+        .a_p1-b{
+            font-family: prelo-book;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            color: $plomo;
+        }
+        .a_p2{
+            font-family: prelo-book;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 500;
+            color: $plomo;
+        }
+        .a_p2-b{
+            font-family: prelo-book;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 700;
+            color: $plomo;
+        }
+        .a_p3{
+            font-family: prelo-book;
+            font-size: 12px;
+            line-height: 19px;
+            font-weight: 500;
+            color: $plomo;
+        }
+        .a_p3-b{
+            font-family: prelo-book;
+            font-size: 12px;
+            line-height: 19px;
+            font-weight: 700;
+            color: $plomo;
+        }
+        .a_p4-b{
+            font-family: prelo-book;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 500;
+            color: $plomo;
+        }
+    
+    //texto
+
+    //texto-link
+
+        .a_link-text{
+            color: $azul5 !important;
+            font-family: prelo-medium !important;
+            font-size: 16px !important;
+            line-height: 16px !important;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .a_link-text:hover{
+            text-decoration: underline;
+            color: $accent !important;
+        }
+
+    //texto-link
+
+    // Iconos
+
+        .a_letters-icon{
+            width: 35px;
+            height: 35px;
+            border-radius: 35px;
+            background-color: $azul2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $gris2;
+            border: 2px solid $gris2;
+            font-family: prelo-bold;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            div{
+                position: relative;
+                top: 2px;
+            }
+        }
+
+    // Iconos
+    
+    // RadioButtons
+
+        .mat-radio-button{
+            margin-right: 20px;
+            @media (max-width: 414px) {
+                display: block !important;
+            }
+            .mat-radio-outer-circle{
+                border-color: $plomo1;
+                background-color: $azul2;
+            }
+            .mat-radio-label-content{
+                font-family: prelo-book;
+                font-size: 16px;
+                line-height: 26px;
+                color: $plomo1;
+            }
+        }
+        .mat-radio-checked{
+            .mat-radio-outer-circle{
+                border-color: $azul;
+                border-width: 4px;
+            }
+        }
+        .mat-radio-inner-circle{
+            width: 0 !important;
+            height: 0 !important;
+            background-color: transparent !important;
+        }
+        .mat-radio-ripple{
+            display: none;
+        }
+
+    // RadioButtons
+
+    // Swich
+
+.mat-slide-toggle {
+    .mat-slide-toggle-content {
+        font-family: prelo-book;
+        font-size: 16px;
+        line-height: 26px;
+        color: $plomo1;
+    }
+    .mat-slide-toggle-bar {
+        background-color: rgba($color: $azul, $alpha: 0.5);
+        height: 28px !important;
+        width: 60px !important;
+        border-radius: 60px !important;
+    }
+    .mat-slide-toggle-thumb-container {
+        top: 3.5px !important;
+        left: initial !important;
+        right: 3px !important;
+    }
+}
+.mat-checked {
+    .mat-slide-toggle-bar {
+        background-color: rgba($color: $azul, $alpha: 1) !important;
+    }
+    .mat-slide-toggle-thumb-container {
+        transform: translate3d(-33px, 0, 0) !important;
+    }
+    .mat-slide-toggle-thumb {
+        background-color: $white !important;
+    }
+}
+.mat-slide-toggle-ripple {
+    display: none !important;
+}
+
+    // Swich
+
+    // Textfields
+
+.mat-form-field {
+    width: 100%;
+    max-width: 250px;
+}
+.mat-form-field.full {
+    width: 100%;
+    max-width: 100%;
+}
+.null-p.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    max-height: 48px !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border-radius: 4px 0 0 4px !important;
+}
+.mat-calendar {
+    font-family: prelo-book !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-suffix {
+    top: -3px !important;
+    right: 10px;
+    .mat-icon-button:focus {
+        outline-width: 0px !important;
+    }
+    .mat-icon-button {
+        color: $azul3;
+        .mat-icon,
+        svg {
+            position: relative !important;
+            top: 8px !important;
+            right: -12px;
+        }
+        .mat-button-focus-overlay {
+            background-color: transparent !important;
+        }
+    }
+    .mat-datepicker-toggle-active {
+        color: $azul3;
+    }
+    .mat-button-ripple {
+        display: none !important;
+    }
+    button.sx {
+        color: $azul5 !important;
+        text-transform: capitalize;
+        font-family: prelo-semibold;
+        font-size: 12px;
+        line-height: 26px;
+    }
+}
+.mat-form-field-infix {
+    border-width: 0px !important;
+    top: 3px;
+    .mat-input-element {
+        font-family: prelo-book;
+        font-size: 16px;
+        line-height: 26px;
+        color: $dark;
+    }
+}
+.mat-input-element {
+    caret-color: $dark !important;
+}
+.mat-form-field-outline-start,
+.mat-form-field-outline-end {
+    border-width: 1px !important;
+}
+.mat-form-field-outline-thick {
+    color: $plomo6 !important;
+}
+.mat-focused .mat-form-field-outline-thick {
+    outline: $azul5 auto 5px !important;
+}
+.mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+    color: $warn !important;
+}
+.mat-form-field-subscript-wrapper {
+    font-size: 65% !important;
+}
+
+// Textfields
+
+// Selects
+
+.autocomplete,
+.select {
+    position: relative;
+    cursor: pointer;
+    input {
+        pointer-events: none;
+    }
+    .mat-icon {
+        position: absolute;
+        right: 0px;
+        margin-right: 5.5px;
+        color: $azul;
+        top: 50%;
+        margin-top: -12px;
+    }
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding-top: 14px !important;
+}
+
+.mat-select-placeholder {
+    font-size: 16px !important;
+    line-height: 26px !important;
+}
+
+        .mat-select-arrow{
+            position: relative;
+            top: 5px;
+            border: 0 !important;
+        }
+
+        .mat-select-value{
+            font-family: "prelo-book" !important;
+        }
+
+        .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple){
+            background-color: $plomo5 !important;
+        }
+
+
+        .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+            color: $azul !important;
+        }
+
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+    color: $plomo6 !important;
+}
+
+.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
+    background-color: $plomo4 !important;
+    color: $dark !important;
+}
+
+    // Selects
+
+    //CheckBox
+
+.mat-checkbox-inner-container {
+    width: 20px !important;
+    height: 20px !important;
+}
+.mat-checkbox-inner-container:active,
+.mat-checkbox-inner-container:focus {
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+.mat-checkbox-label {
+    font-family: prelo-book;
+    font-size: 16px;
+    line-height: 20px !important;
+    color: $plomo1;
+}
+.mat-checkbox-ripple {
+    display: none;
+}
+
+    //ChackBox
+
+    // BtnPrincipal
+
+        .a_btn-principal{
+            background-color: $primary;
+            padding: 11px 15px 10px 15px;
+            border-radius: 4px;
+            font-family: prelo-semibold;
+            font-size: 14px;
+            line-height: 14px;
+            transition: 0.5s;
+            color: $azul3;
+            min-width: 120px;
+            min-height: 40px;
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        .a_btn-principal.full{
+            width: 100%;
+        }
+        .a_btn-principal.md{
+            padding-bottom: 13px;
+            padding-top: 12px;
+        }
+        .a_btn-principal.lg{
+            padding-bottom: 15px;
+            padding-top: 14px;
+        }
+        .a_btn-principal.xl{
+            padding-bottom: 17px;
+            padding-top: 16px;
+        }
+        .a_btn-principal:hover{
+            background-color: $secunday;
+        }
+        .a_btn-principal:focus{
+            background-color: $terciary;
+            outline: -webkit-focus-ring-color auto 5px;
+        }
+        .a_btn-principal:disabled{
+            opacity: 0.5;
+        }
+
+    // BtnPrincipal
+
+    // BtnSecundario
+
+        .a_btn-secundario{
+            background-color: $info1;
+            padding: 11px 15px 10px 15px;
+            border-radius: 4px;
+            font-family: prelo-semibold;
+            font-size: 14px;
+            line-height: 14px;
+            transition: 0.5s;
+            color: $azul3;
+            border: 1px solid transparent;
+            text-align: center;
+            min-width: 120px;
+            min-height: 40px;
+        }
+        .a_btn-secundario.full{
+            width: 100%;
+        }
+        .a_btn-secundario.md{
+            padding-bottom: 13px;
+            padding-top: 12px;
+        }
+        .a_btn-secundario.lg{
+            padding-bottom: 15px;
+            padding-top: 14px;
+        }
+        .a_btn-secundario.xl{
+            padding-bottom: 17px;
+            padding-top: 16px;
+        }
+        .a_btn-secundario:hover{
+            background-color: $azul1;
+        }
+        .a_btn-secundario:focus{
+            background-color: $azul1;
+            outline: -webkit-focus-ring-color auto 5px;
+        }
+        .a_btn-secundario:disabled{
+            opacity: 0.5;
+        }
+
+    // BtnSecundario
+
+    // BtnTerciario
+
+.a_btn-terciario {
+    background-color: transparent;
+    padding: 11px 15px 10px 15px;
+    border-radius: 4px;
+    font-family: prelo-semibold;
+    font-size: 14px;
+    line-height: 14px;
+    transition: 0.5s;
+    color: $azul3;
+    border: 1px solid $azul3;
+    text-align: center;
+    min-width: 120px;
+    min-height: 40px;
+}
+.a_btn-terciario.full {
+    width: 100%;
+}
+.a_btn-terciario.md {
+    padding-bottom: 13px;
+    padding-top: 12px;
+}
+.a_btn-terciario.lg {
+    padding-bottom: 15px;
+    padding-top: 14px;
+}
+.a_btn-terciario.xl {
+    padding-bottom: 17px;
+    padding-top: 16px;
+}
+.a_btn-terciario:hover {
+    background-color: rgba($color: $azul1, $alpha: 0.5);
+}
+.a_btn-terciario:focus {
+    background-color: $azul1;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.a_btn-terciario:disabled {
+    opacity: 0.5;
+}
+
+    // BtnTerciario
+
+    // BtnCom1
+
+        .a_btn-com1{
+            background-color: $azul3;
+            padding: 11px 15px 10px 15px;
+            border-radius: 4px;
+            font-family: prelo-semibold;
+            font-size: 14px;
+            line-height: 14px;
+            transition: 0.5s;
+            color: $white;
+            border: 1px solid transparent;
+            text-align: center;
+            min-width: 120px;
+            min-height: 40px;
+        }
+        .a_btn-com1.full{
+            width: 100%;
+        }
+        .a_btn-com1.md{
+            padding-bottom: 13px;
+            padding-top: 12px;
+        }
+        .a_btn-com1.lg{
+            padding-bottom: 15px;
+            padding-top: 14px;
+        }
+        .a_btn-com1.xl{
+            padding-bottom: 17px;
+            padding-top: 16px;
+        }
+        .a_btn-com1:hover{
+            background-color: $azul4;
+        }
+        .a_btn-com1:focus{
+            background-color: $azul3;
+            outline: -webkit-focus-ring-color auto 5px;
+        }
+        .a_btn-com1:disabled{
+            opacity: 0.5;
+        }
+
+    // BtnCom1
+
+    // BtnCom2
+
+        .a_btn-com2{
+            background-color: $warnBtn;
+            padding: 11px 15px 10px 15px;
+            border-radius: 4px;
+            font-family: prelo-semibold;
+            font-size: 14px;
+            line-height: 14px;
+            transition: 0.5s;
+            color: $white;
+            border: 1px solid transparent;
+            text-align: center;
+            min-height: 40px;
+            min-width: 120px;
+        }
+        .a_btn-com2.full{
+            width: 100%;
+        }
+        .a_btn-com2.md{
+            padding-bottom: 13px;
+            padding-top: 12px;
+        }
+        .a_btn-com2.lg{
+            padding-bottom: 15px;
+            padding-top: 14px;
+        }
+        .a_btn-com2.xl{
+            padding-bottom: 17px;
+            padding-top: 16px;
+        }
+        .a_btn-com2:hover{
+            background-color: $warnBtn;
+        }
+        .a_btn-com2:focus{
+            background-color: $warnBtn;
+            outline: -webkit-focus-ring-color auto 5px;
+        }
+        .a_btn-com2:disabled{
+            opacity: 0.5;
+        }
+
+    // BtnCom2
+
+    // Btnicon
+
+        .btn-icon{
+            cursor: pointer;
+        }
+
+    // Btnicon
+
+    // Menu
+
+        .a_menu{
+            position: absolute;
+            left: 0px;
+            z-index: 5;
+            display: none;
+            color: $plomo;
+             @media (max-width: 840px){
+                display: block;
+            } 
+        }
+        .a_menu:focus{
+            outline: 0px !important;
+        }
+
+
+    // Menu
+
+    // Hints
+
+        .mat-hint{
+            color: $plomo !important;
+            font-family: prelo-book !important;
+            font-size: 12px !important;
+        }
+
+    // Hints
+
+    // Error
+
+    .mat-error{
+        color: $warn !important;
+        font-family: prelo-book !important;
+        font-size: 12px !important;
+        display: flex !important;
+    }
+
+    // Error
+
+// Átomos   
+
+// Moléculas
+
+    //Mensajes
+
+.mensaje {
+    border-radius: 4px;
+    width: fit-content;
+    color: $white;
+    font-family: prelo-book;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.mensaje.w-full {
+    justify-content: flex-start;
+    width: 100%;
+    button {
+        margin-left: auto;
+    }
+}
+.mensaje.info {
+    background-color: $azul5;
+}
+.mensaje.success {
+    background-color: $sucess;
+}
+.mensaje.advert {
+    background-color: $advert;
+}
+.mensaje.error {
+    background-color: $warn;
+}
+.mensaje.info1 {
+    color: $azul5;
+    border: 1px solid $azul5;
+    background-color: $info1;
+}
+.mensaje.success1 {
+    color: $sucess;
+    border: 1px solid $sucess;
+    background-color: $succes2;
+}
+.mensaje.adverte1 {
+    color: $advert;
+    border: 1px solid $advert;
+    background-color: $advert3;
+}
+.mensaje.error1 {
+    color: $warn;
+    border: 1px solid $warn;
+    background-color: $warn2;
+}
+.msnShow {
+    opacity: 1;
+    transform: translateY(0);
+}
+.log_msn {
+    max-width: 363px;
+    min-width: 363px;
+    @media (max-width: 500px) {
+        min-width: 90%;
+    }
+}
+
+    //Mensajes
+
+    // Account
+
+        .m_account{
+            .texto{
+                font-family: preloslab-book;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 16px;
+                text-transform: uppercase;
+                height: 11px;
+                color: $azul3;
+                cursor: pointer;
+            }
+            .divider{
+                height: 16px;
+                width: 1px;
+                background-color: $azul3;
+            }
+            .texto1{
+                font-family: preloslab-book;
+                font-size: 16px;
+                line-height: 16px;
+                text-transform: capitalize;
+                height: 11px;
+                color: $azul3;
+                cursor: pointer;
+            }
+            .texto2{
+                font-family: preloslab-book;
+                font-size: 16px;
+                line-height: 16px;
+                height: 11px;
+                color: $azul3;
+                cursor: pointer;
+            }
+        }
+
+    // Account
+
+    // Paginador de tablas
+
+        .mat-paginator{
+            .mat-paginator-range-label{
+                color: $plomo !important;
+                font-size: 14px !important;
+            }
+            button:focus{
+                outline: 0px !important;
+            }
+        }
+
+    // Paginador de tablas
+
+    // Spinner
+
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 96px;
+        height: 96px;
+        
+    }
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 4px solid $primary;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $primary transparent transparent transparent;
+    }
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    // Spinner
+
+// Moléculas
+
+// Organismos
+
+        // Top menu
+
+            .o_title-toolbar {
+                background:$white;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+                border: 0;
+                z-index: 100;
+                position: sticky;
+                top: 0;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+        // Top menu
+        
+        // Left menu
+
+.o_lelf-menu {
+    width: 200px;
+    -webkit-box-shadow: 0px -1px 4px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px -1px 4px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -1px 4px 1px rgba(0, 0, 0, 0.1);
+    .mat-list-base {
+        padding-top: 0px;
+    }
+    .mat-expansion-panel-header {
+        .a_h-btn {
+            transition: 0.5s;
+        }
+    }
+    .mat-expansion-panel-header:hover {
+        background-color: transparent !important;
+        .a_h-btn {
+            font-weight: bold;
+        }
+    }
+    .mat-expansion-panel-header.mat-expanded {
+        background-color: transparent !important;
+        .a_h-btn {
+            font-weight: bold;
+        }
+    }
+    .mat-expansion-panel-header.mat-expanded::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 60%;
+        background-color: $primary;
+        left: 4px;
+        top: 20%;
+    }
+    .mat-expansion-panel {
+        box-shadow: none;
+    }
+    .mat-expansion-panel-body {
+        padding: 0 !important;
+    }
+    .mat-expansion-indicator::after {
+        border-color: $azul !important;
+    }
+    .mat-expansion-panel-content {
+        -webkit-box-shadow: inset 0px -6px 5px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: inset 0px -6px 5px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0px -6px 5px 0px rgba(0, 0, 0, 0.1);
+    }
+    .mat-expansion-panel {
+        border-radius: 0 !important;
+    }
+    .simple {
+        padding: 0 24px 0 24px;
+        height: 48px;
+        cursor: pointer;
+    }
+    .over {
+        transition: 0.5s;
+        position: relative;
+    }
+    .over:hover {
+        font-weight: bold;
+    }
+    .simple:active::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 60%;
+        background-color: $primary;
+        left: 4px;
+        top: 20%;
+    }
+    .active {
+        background-color: $primary !important;
+        .a_h-btn {
+            font-weight: bold;
+        }
+    }
+    .divider {
+        height: 1px;
+        width: 90%;
+        margin: 25px auto 10px auto;
+        background-color: rgba($color: $plomo, $alpha: 0.5);
+    }
+}
+
+        // Left menu
+
+//Card
+.o_card {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14),
+        0px 0px 0px 0px rgba(0, 0, 0, 0.12) !important;
+    border: solid 1px $plomo4;
+    border-radius: 4px !important;
+    padding: 25px 30px 20px 30px !important;
+}
+.o_card.tb {
+    @media (max-width: 414px) {
+        padding: 35px 10px 30px 10px !important;
+    }
+}
+.o_login {
+    max-width: 363px;
+    padding: 20px 24px !important;
+    .mat-form-field-wrapper {
+        padding-bottom: 8px;
+    }
+}
+//Card
+
+        //Tabla
+            .o_alto-fijo{
+                height: 400px;
+            }
+            .o_tabla{
+                width: 100%;
+                border-radius: 4px; 
+                .mat-header-cell{
+                    border-width: 0px !important;
+                    text-transform: initial;
+                    font-family: prelo-semibold;
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: $plomo !important; 
+                    padding: 0 10px;
+                    background-color: $azul2;
+                }
+                .mat-cell{
+                    white-space:nowrap;
+                    border-width: 0px !important;
+                    padding: 0 10px;
+                    @media (orientation: portrait){
+                        padding-top: 15px;
+                        padding-bottom: 10px;
+                    }
+                }
+                .mat-footer-cell{
+                    font-family: prelo-semibold;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    color: $plomo !important; 
+                    border-width: 0px !important;
+                    position: relative;
+                    padding: 0 10px;
+                }
+                .mat-footer-cell::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $plomo4;
+                }
+                .mat-footer-cell.no-border::after{
+                    height: 0;
+                }
+                th::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: $plomo;
+                }
+                .no-border::after{
+                    height: 0;
+                }
+                thead{
+                    tr{
+                        th{
+                            position: relative;
+                        }
+                        th::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $plomo4;
+                        }
+                        .no-border::after{
+                            height: 0;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border-bottom: 1px solid $plomo4; 
+                    }
+                }
+                th{
+                    font-family: prelo-bold;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    color: $plomo !important; 
+                    text-transform: uppercase;
+                }
+                td{
+                    font-family: prelo-book;
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 500;
+                    color: $plomo; 
+                    .mat-icon{
+                        color: $azul;
+                    }
+                    .i-error{
+                        color: $warn !important;
+                    }
+                }
+                .text-right{
+                    text-align: right !important;
+                }
+                .text-center{
+                    text-align: center !important;
+                }
+                td.normal{
+                    color: $plomo !important;
+                }
+                //Color error
+                td.color1{
+                    background-color: inherit;
+                    color: $tabla1 !important;
+                }
+                //Color categoria 2
+                td.color2{
+                    background-color: inherit;
+                    color: $tabla2 !important;
+                }
+                //Color categoria 3
+                td.color3{
+                    background-color: inherit;
+                    color: $tabla3 !important;
+                }
+            }
+
+        //Tabla
+
+        //Tabs
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: $accent !important;
+}
+.mat-ink-bar {
+    height: 4px !important;
+}
+.mat-tab-label {
+    min-width: fit-content !important;
+    height: 45px !important;
+    font-family: prelo-book !important;
+    font-size: 18px !important;
+    line-height: 18px !important;
+    color: $plomo !important;
+    padding: 0 12px !important;
+    margin: 0 8px !important;
+    opacity: 1 !important;
+}
+.mat-tab-label:hover {
+    font-family: prelo-semibold !important;
+    color: $azul !important;
+}
+.mat-tab-label-active {
+    font-family: prelo-semibold !important;
+    color: $azul !important;
+}
+.mat-tab-nav-bar,
+.mat-tab-header {
+    border-width: 0px !important;
+}
+.mat-tab-body-wrapper {
+    padding-top: 10px;
+}
+
+        //Tabs
+
+        // Load
+
+.over-load {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba($color: $white, $alpha: 0.5);
+    left: 0;
+    top: 0;
+}
+
+    // Load
+
+    //floating-btn
+
+    .float {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 40px;
+        z-index: 999;
+        color: $azul3;
+      }
+
+      .icon-2x {
+        font-size: 40px;
+      }
+
+// organismos

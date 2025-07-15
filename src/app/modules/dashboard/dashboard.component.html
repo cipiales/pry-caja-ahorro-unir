@@ -1,0 +1,63 @@
+<div class="container">
+  <!-- Sección de búsqueda -->
+  <div class="busqueda">
+    <h4>Busqueda </h4>
+    <form [formGroup]="formBusqueda" novalidate>
+      <div class="criterios">
+        <label><input type="radio" formControlName="criterio" value="Todos" (click)="onClickCriterio()" > Todos</label>
+        <label><input type="radio" formControlName="criterio" value="NumeroCuenta" (click)="onClickCriterio()"> Nº Cuenta</label>
+        <label><input type="radio" formControlName="criterio" value="Cedula" (click)="onClickCriterio()"> Cédula</label>
+        <label for="estado">Estado</label>
+
+              <select
+              class="form-control"
+              [formControl]="formBusqueda.controls['estado']"
+              name="estado"
+            >
+              <option value="">--Ninguno--</option>
+              <option value="ACT">Activo</option>
+              <option value="INA">Inactivo</option>
+
+              </select>
+
+      </div>
+
+      <input type="text" formControlName="valor" placeholder="Ingrese valor..." />
+       <div class="general-error my-3" *ngIf="formBusqueda.controls['valor'].invalid">
+              <span class="msn error">{{getErrorMessage("valor")}}</span>
+      </div>
+
+      <button type="submit" (click)="buscarCuentasFormulario()">Buscar</button>
+    </form>
+  </div>
+
+  <!-- Sección de resultados -->
+  <div class="resultados">
+    <h4>Resultados</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Nº Cuenta</th>
+          <th>Cédula</th>
+          <th>Nombre</th>
+          <th>Caja Ahorro</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of resultados">
+          <td>{{ c.codigoCuenta }}</td>
+          <td>{{ c.socio.cedulaIdentidad }}</td>
+          <td>{{ c.socio.nombreCompleto }}</td>
+          <td>{{ c.codigoCajaAhorro }}</td>
+          <td>
+            <span [ngClass]="c.estado === 'ACT' ? 'activo' : 'inactivo'">
+              {{ c.estado }}
+            </span>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

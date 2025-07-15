@@ -1,0 +1,2609 @@
+/* ==================================================
+   Configuraciones Generales
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+
+/* ==================================================
+   Configuraciones Generales
+================================================== */
+
+
+/* ==================================================
+   Fuentes
+================================================== */
+
+@font-face {
+    font-family: 'ARI';
+    src: url('../fonts/Arial.eot');
+    src: url('../fonts/Arial.eot?iefix') format('eot');
+    src: url("../fonts/Arial.ttf"), url("../fonts/Arial.woff"), url("../fonts/Arial.otf");
+}
+
+@font-face {
+    font-family: 'ARI-B';
+    src: url('../fonts/ArialBold.eot');
+    src: url('../fonts/ArialBold.eot?iefix') format('eot');
+    src: url("../fonts/ArialBold.ttf"), url("../fonts/ArialBold.woff"), url("../fonts/ArialBold.otf");
+}
+
+@font-face {
+    font-family: 'ARI-BI';
+    src: url('../fonts/ArialBoldItalic.eot');
+    src: url('../fonts/ArialBoldItalic.eot?iefix') format('eot');
+    src: url("../fonts/ArialBoldItalic.ttf"), url("../fonts/ArialBoldItalic.woff"), url("../fonts/ArialBoldItalic.otf");
+}
+
+@font-face {
+    font-family: 'SWI';
+    src: url('../fonts/Swiss721BT.eot');
+    src: url('../fonts/Swiss721BT.eot?iefix') format('eot');
+    src: url("../fonts/Swiss721BT.ttf"), url("../fonts/Swiss721BT.woff"), url("../fonts/Swiss721BT.otf");
+}
+
+@font-face {
+    font-family: 'PREL-SE';
+    src: url('../fonts/Prelo-SemiBold.eot');
+    src: url('../fonts/Prelo-SemiBold.eot?iefix') format('eot');
+    src: url("../fonts/Prelo-SemiBold.ttf"), url("../fonts/Prelo-SemiBold.woff"), url("../fonts/Prelo-SemiBold.otf");
+}
+
+@font-face {
+    font-family: 'PREL-M';
+    src: url('../fonts/Prelo-Medium.eot');
+    src: url('../fonts/Prelo-Medium.eot?iefix') format('eot');
+    src: url('../fonts/Prelo-Medium.ttf?iefix') format('embedded-opentype');
+    src: url("../fonts/Prelo-Medium.ttf") format("opentype"), url("../fonts/Prelo-Medium.woff"), url("../fonts/Prelo-Medium.otf");
+}
+
+@font-face {
+    font-family: 'PREL-B';
+    src: url('../fonts/PreloSlab-Book.eot');
+    src: url('../fonts/PreloSlab-Book.eot?iefix') format('eot');
+    src: url('../fonts/PreloSlab-Book.eot?iefix') format('embedded-opentype');
+    src: url("../fonts/PreloSlab-Book.ttf") format("opentype"), url("../fonts/PreloSlab-Book.woff"), url("../fonts/PreloSlab-Book.otf");
+}
+
+@font-face {
+    font-family: 'Prelo-Book';
+    src: url('../fonts/Prelo-Book.eot');
+    src: url('../fonts/Prelo-Book.eot?iefix') format('eot');
+    src: url('../fonts/Prelo-Book.eot?iefix') format('embedded-opentype');
+    src: url("../fonts/Prelo-Book.ttf") format("opentype"), url("../fonts/Prelo-Book.woff"), url("../fonts/Prelo-Book.otf");
+}
+
+@font-face {
+    font-family: 'Prelo-Bold';
+    src: url('../fonts/Prelo-Bold.eot');
+    src: url('../fonts/Prelo-Bold.eot?iefix') format('eot');
+    src: url("../fonts/Prelo-Bold.ttf")format("opentype"), url("../fonts/Prelo-Bold.woff"), url("../fonts/Prelo-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Prelo-Light';
+    src: url('../fonts/Prelo-Light.eot');
+    src: url('../fonts/Prelo-Light.eot?iefix') format('eot');
+    src: url("../fonts/Prelo-Light.ttf"), url("../fonts/Prelo-Light.woff"), url("../fonts/Prelo-Light.otf");
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import url(https://fonts.googleapis.com/icon?family=Roboto);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@font-face {
+font-family: Prelo-book;
+src: url(../fonts/Prelo-Book.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-bold;
+src: url(../fonts/Prelo-Bold.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-exbd;
+src: url(../fonts/Prelo-Exbd.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-Extra-light;
+src: url(../fonts/Prelo-ExtraLight.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-Light;
+src: url(../fonts/Prelo-Light.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-Medium;
+src: url(../fonts/Prelo-Medium.otf) format('opentype');
+}
+@font-face {
+font-family: Prelo-Semi-bold;
+src: url(../fonts/Prelo-SemiBold.otf) format('opentype');
+}
+@font-face {
+font-family: Preloslab-bold;
+src: url(../fonts/PreloSlab-Bold.otf) format('opentype');
+}
+@font-face {
+font-family: Preloslab-book;
+src: url(../fonts/PreloSlab-Book.otf) format('opentype');
+}
+@font-face {
+font-family: Preloslab-exbd;
+src: url(../fonts/PreloSlab-ExBd.otf) format('opentype');
+}
+@font-face {
+font-family: Preloslab-Light;
+src: url(../fonts/PreloSlab-Light.otf) format('opentype');
+}
+@font-face {
+font-family: Preloslab-Semi-bold;
+src: url(../fonts/PreloSlab-SemiBold.otf) format('opentype');
+}
+
+/* ==================================================
+    fonts
+================================================== */
+
+
+/* ==================================================
+    Encabezado
+================================================== */
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100
+}
+
+.head-space {
+    width: 100%;
+    height: 80px;
+}
+
+
+/*.barra-amarilla {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #FFDD00;
+}*/
+
+.barra-blanca {
+    width: 100%;
+    height: 110;
+    padding: 15px 0 15px 0;
+    background: #FFFFFF;
+}
+
+.barra-blanca .fecha {
+    font-family: "Prelo-Book";
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #0F265C;
+}
+
+.barra-blanca .sesion {
+    float: right;
+    right: 10px;
+}
+
+.barra-blanca .ingreso {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 10pt;
+    font-family: "Prelo-Book";
+    color: #0F265C;
+    /*border-right: 1px solid #0F265C;*/
+    padding: 0 10px;
+}
+
+.barra-blanca .usuario {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 10pt;
+    font-family: "Prelo-Book";
+    color: #0F265C;
+    padding: 0 10px;
+}
+
+.barra-blanca .salir {
+    width: 20px;
+    height: 20px;
+    background: url(../images/salir.png);
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+    transition: all .5s;
+    text-indent: 25px;
+    line-height: 25px;
+    font-size: 10pt;
+    font-family: "Prelo-Book";
+}
+
+.barra-blanca .sesion .ingreso,
+.barra-blanca .sesion .usuario {
+    border-left: 1px solid #0F265C;
+}
+
+.barra-blanca .sesion .ingreso:first-child,
+.barra-blanca .sesion .usuario:first-child {
+    border-left: none;
+}
+
+
+
+
+/* ==================================================
+    Encabezado
+================================================== */
+
+
+/* ==================================================
+    Titulares
+================================================== */
+
+.titularTipoUno {
+    width: 100%;
+    text-align: center;
+    font-family: "PREL-B";
+    font-weight: normal;
+    font-size: 32pt;
+    line-height: 32pt;
+    color: #0F265C;
+}
+
+.titularTipoDos {
+    width: 100%;
+    text-align: center;
+    font-family: "PREL-B";
+    font-weight: normal;
+    font-size: 20pt;
+    line-height: 20pt;
+    color: #0F265C;
+}
+
+.titularTipoTres {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.titularTipoCuatro {
+    width: 100%;
+    text-align: center;
+    font-family: "Prelo-Book";
+    font-weight: normal;
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #0F265C;
+}
+
+.titularTipoCinco {
+    width: 100%;
+    font-family: "PREL-SE";
+    font-weight: normal;
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #0F265C;
+    border-bottom: #0F265C solid 1px;
+}
+
+.titularTipoTres .subtitular {
+    border-bottom: 0.75pt solid #0F265C;
+    padding: 0px 20px 0 10px;
+}
+
+.titularTipoTres .subtitular span {
+    font-family: "Prelo-Book";
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #0F265C;
+}
+
+.titularTipoUno-border {
+    width: 100%;
+    text-align: center;
+    font-family: "PREL-SE";
+    font-weight: normal;
+    font-size: 22pt;
+    line-height: 22pt;
+    color: #0F265C;
+    border: 1.5px solid #0F265C;
+    padding: 20px 0;
+    border-radius: 7px;
+}
+
+.titularGracias {
+    width: 100%;
+    text-align: center;
+    font-family: 'PREL-SE';
+    font-size: 40pt;
+    line-height: 40pt;
+    color: #fff;
+}
+
+.titularGracias span {
+    color: #FFDD00;
+}
+
+.textoNormalTipoUno {
+    width: 100%;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #0F265C;
+}
+
+
+/* ==================================================
+    Titulares
+================================================== */
+
+
+/* ==================================================
+    Cajas
+================================================== */
+
+.caja-servicios {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #d5d5d5;
+    padding: 40px 0;
+    border-bottom-left-radius: 15px;
+}
+
+.cajas-inputs {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+}
+
+.caja-requisitos {
+    background: #FFFFFF;
+    border-bottom-left-radius: 15px;
+    padding: 20px 10px;
+    position: relative;
+    border: 1px #d5d5d5 solid;
+}
+
+.caja-autorizacion {
+    width: 100%;
+    height: 130px;
+    margin: 0 auto 15px auto;
+    padding: 10px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    border-bottom-left-radius: 15px;
+    border: 1px #d5d5d5 solid;
+}
+
+.caja-informativa {
+    width: 100%;
+    padding: 20px;
+    background: #E5E5E5;
+    border: 1px solid transparent;
+    border-bottom-left-radius: 15px;
+}
+
+.caja-informativa .titulo {
+    width: 100%;
+    font-family: "PREL-B";
+    font-size: 16pt;
+    line-height: 18pt;
+    color: #0F265C;
+}
+
+.caja-informativa .subtitulo {
+    width: 100%;
+    font-family: "PREL-M";
+    font-size: 13pt;
+    line-height: 15pt;
+    color: #0F265C;
+}
+
+.caja-informativa .texto-ord {
+    width: 100%;
+    font-family: "Prelo-Book";
+    font-size: 10pt;
+    line-height: 11pt;
+    color: #0F265C;
+}
+
+.caja-informativa .texto,
+.caja-informativa-trans .texto {
+    width: 100%;
+    font-family: "Prelo-Book";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #0F265C;
+}
+
+.caja-informativa .textoTipoUno,
+.caja-informativa-trans .textoTipoUno {
+    width: 100%;
+    font-family: "PREL-M";
+    font-size: 12pt;
+    line-height: 13pt;
+    color: #0F265C;
+}
+
+.caja-informativa .line {
+    width: 100%;
+    height: 1px;
+    background: #0F265C;
+    margin: 25px 0;
+}
+
+.caja-informativa-trans {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid #d6d1ca;
+    border-bottom-left-radius: 15px;
+}
+
+.caja-opcion {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #d6d1ca;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+}
+
+.caja-informativaDatos {
+    width: 100%;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #d6d1ca;
+    border-bottom-left-radius: 15px;
+}
+
+.caja-informativaDatos .textoTipoUno {
+    font-family: "PREL-M";
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #616161;
+}
+
+.caja-informativaDatos .textoTipoDos {
+    font-family: "PREL-M";
+    font-size: 14pt;
+    line-height: 17pt;
+    color: #bfbfbf;
+}
+
+.caja-informativaDatos .textoTipoTres {
+    font-family: "PREL-M";
+    font-size: 14pt;
+    line-height: 17pt;
+    color: #0F265C;
+    letter-spacing: 0.5px;
+}
+
+.caja-informativaDatos .textoTipoCuatro {
+    font-family: "PREL-M";
+    font-size: 10pt;
+    line-height: 17pt;
+    color: #6cb96b;
+    text-align: right;
+}
+
+.caja-informativaDatos .line {
+    width: 100%;
+    height: 1px;
+    background: #0F265C;
+    margin: 10px 0;
+}
+
+.caja-error {
+    width: 100%;
+    padding: 10px !important;
+    border: 1px solid #E8446C;
+    background-color: #FCE3E9;
+    margin-bottom: 15px;
+}
+
+.caja-adver {
+    width: 100%;
+    padding: 10px !important;
+    border: 1px solid #FEE595;
+    background-color: #FFFADD;
+    margin-bottom: 15px;
+}
+
+.caja-exitos {
+  width: 100%;
+  padding: 10px !important;
+  border: 1px solid #a5b8a3;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.caja-error .msn,
+.caja-adver .msn,
+.caja-exitos .msn {
+    padding: 0px 0 0 35px !important;
+}
+
+.caja-error .msn:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon-error.png) no-repeat center;
+    position: absolute;
+    left: 0px;
+    top: -6px;
+}
+
+.caja-adver .msn:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon-adven.png) no-repeat center;
+    position: absolute;
+    left: 0px;
+    top: -6px;
+}
+
+.caja-exitos .msn:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon-check.png) no-repeat center;
+    position: absolute;
+    left: 0px;
+    top: -6px;
+}
+
+.caja-exito {
+  width: 100%;
+  padding: 10px !important;
+  border: 1px solid #1b5702;
+  background-color: #e2ffdd;
+  margin-bottom: 15px;
+}
+
+
+/* ==================================================
+    Cajas
+================================================== */
+
+
+/* ==================================================
+    Botones
+================================================== */
+
+.boton-amarillo {
+    width: 250px;
+    padding: 15px 0 10px 0;
+    background-color: #FEDA32;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    line-height: 20px;
+    border: 0px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-amarillo:hover {
+    background: #FED230;
+}
+
+.boton-amarillo:active {
+    background: #FECC2E;
+}
+
+.boton-amarillo .trig-uno {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: #FECB2E;
+    position: absolute;
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Safari */
+    transform: rotate(45deg);
+    top: -45px;
+    left: -25px;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.boton-amarillo:hover>.trig-uno {
+    background: #FECA2F;
+}
+
+.boton-amarillo:active>.trig-uno {
+    background: transparent;
+}
+
+.boton-amarillo .trig-dos {
+    content: "";
+    width: 80px;
+    height: 50px;
+    background: #FEEC35;
+    position: absolute;
+    -ms-transform: rotate(25deg);
+    /* IE 9 */
+    -webkit-transform: rotate(25deg);
+    /* Safari */
+    transform: rotate(25deg);
+    top: 35px;
+    left: -30px;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.boton-amarillo:hover>.trig-dos {
+    background: #FEDA32;
+}
+
+.boton-amarillo:active>.trig-dos {
+    background: transparent;
+}
+
+.boton-amarillo-secundario {
+    width: 250px;
+    padding: 13px 0 8px 0;
+    font-family: "PREL-M";
+    background-color: transparent;
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    line-height: 20px;
+    border: 2px solid #FEE598;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-amarillo-secundario:hover {
+    background-color: #FFF9E6;
+}
+
+.boton-amarillo-secundario:active {
+    background-color: #FEEEB5;
+}
+
+.boton-amarillo-terceario {
+    width: 250px;
+    padding: 15px 0 10px 0;
+    background-color: transparent;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    line-height: 20px;
+    border: 0px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-amarillo-terceario span {
+    border-bottom: 2px solid #002561;
+}
+
+.boton-amarillo-terceario:hover {
+    background-color: rgba(231, 233, 238, 0.5)
+}
+
+.boton-amarillo-terceario:active {
+    background-color: rgba(231, 233, 238, 0.8)
+}
+
+
+/* ==================================================
+    Botones
+================================================== */
+
+
+/* ==================================================
+    Listados
+================================================== */
+
+.listadoTipoUno {
+    width: 100%;
+    list-style-type: none;
+}
+
+.listadoTipoUno li {
+    width: 100%;
+    font-family: "Prelo-Book";
+    font-size: 12pt;
+    color: #666666;
+    line-height: 12pt;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.listadoTipoUno li::before {
+    content: "";
+    background: url(../images/icono-mq.png);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    margin-left: -20px;
+}
+
+
+/* ==================================================
+    Listados
+================================================== */
+
+
+/* ==================================================
+    Tablas
+================================================== */
+
+.tabla {
+    width: 100%;
+}
+
+.tabla td {
+    padding: 10px 20px;
+}
+
+.tabla .border_bottom td {
+    border-bottom: #999999 solid 1px;
+}
+
+.tabla .border_rigth {
+    border-right: #999999 solid 1px;
+}
+
+.tabla .textoTipoUno {
+    font-family: "Prelo-Bold";
+    color: #666666;
+    font-size: 12pt;
+    line-height: 12pt;
+}
+
+.tabla .textoTipoDos {
+    font-family: "Prelo-Book";
+    color: #0c2760;
+    font-size: 12pt;
+    line-height: 12pt;
+}
+
+.tabla .checkTipoDos {
+    padding: 0;
+}
+
+.tabla .checkTipoDos [type="checkbox"]:not(:checked)+.text,
+.tabla .checkTipoDos [type="checkbox"]:checked+.text {
+    padding-left: 20%!important;
+    padding-top: 4px!important;
+    color: #0c2760!important;
+}
+
+.tabla .checkTipoDos [type="checkbox"]:not(:checked)+.text:before,
+.tabla .checkTipoDos [type="checkbox"]:checked+.text:before,
+.tabla .checkTipoDos [type="checkbox"]:not(:checked)+.text:after,
+.tabla .checkTipoDos [type="checkbox"]:checked+.text:after {
+    top: -2px!important;
+}
+
+.tabla .sublin {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.tabla .chek-center [type="checkbox"]:not(:checked)+.text:before,
+.tabla .chek-center [type="checkbox"]:checked+.text:before,
+.tabla .chek-center [type="checkbox"]:not(:checked)+.text:after,
+.tabla .chek-center [type="checkbox"]:checked+.text:after {
+    top: -8px!important;
+    left: -12.5px!important;
+    margin-left: 50%!important;
+}
+
+.tabla .token {
+    width: 20px;
+    height: 20px;
+    background: url("../images/iconos.png");
+    background-position: 0 center;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabla .token:after {
+    content: "Token";
+    position: absolute;
+    font-family: "ARI";
+    color: #bfbfbf;
+    font-size: 10pt;
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.tabla .token:hover::after {
+    opacity: 1;
+}
+
+.tabla .eliminar {
+    width: 20px;
+    height: 20px;
+    background: url("../images/iconos.png");
+    background-position: -20px center;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabla .eliminar:after {
+    content: "Eliminar";
+    position: absolute;
+    font-family: "ARI";
+    color: #bfbfbf;
+    font-size: 10pt;
+    position: absolute;
+    left: -53px;
+    top: 4px;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.tabla .eliminar:hover::after {
+    opacity: 1;
+}
+
+.tabla .editar {
+    width: 20px;
+    height: 20px;
+    background: url("../images/iconos.png");
+    background-position: -40px center;
+    margin-top: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabla .editar:after {
+    content: "Editar";
+    position: absolute;
+    font-family: "ARI";
+    color: #bfbfbf;
+    font-size: 10pt;
+    position: absolute;
+    left: -39px;
+    top: 4px;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.tabla .editar:hover::after {
+    opacity: 1;
+}
+
+
+/* ==================================================
+    Tablas
+================================================== */
+
+
+/* ==================================================
+    Autorizaciones
+================================================== */
+
+.checkTipoUno input[type=checkbox] {
+    width: 5%;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+.checkTipoUno label,
+.checkTipoDos label {
+    color: #666666;
+    font-family: "Prelo-Book";
+}
+
+
+/* Base for label styling */
+
+.checkTipoUno [type="checkbox"]:not(:checked),
+.checkTipoUno [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkTipoUno [type="checkbox"]:not(:checked)+.text,
+.checkTipoUno [type="checkbox"]:checked+.text {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+
+/* checkbox aspect */
+
+.checkTipoUno [type="checkbox"]:not(:checked)+.text:before,
+.checkTipoUno [type="checkbox"]:checked+.text:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #0F265C;
+    background: transparent;
+    border-radius: 25px;
+}
+
+
+/* checked mark aspect */
+
+.checkTipoUno [type="checkbox"]:not(:checked)+.text:after,
+.checkTipoUno [type="checkbox"]:checked+.text:after {
+    content: url(../images/check.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all .2s;
+    z-index: 1;
+}
+
+
+/* checked mark aspect changes */
+
+.checkTipoUno [type="checkbox"]:not(:checked)+.text:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.checkTipoUno [type="checkbox"]:checked+.text:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* disabled checkbox */
+
+.checkTipoUno [type="checkbox"]:disabled:not(:checked)+.text:before,
+.checkTipoUno [type="checkbox"]:disabled:checked+.text:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+.checkTipoUno [type="checkbox"]:disabled:checked+.text:after {
+    color: #999;
+}
+
+.checkTipoUno [type="checkbox"]:disabled+.text {
+    color: #aaa;
+}
+
+.checkTipoDos {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.checkTipoDos input[type=checkbox] {
+    width: 5%;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+
+/* Base for label styling */
+
+.checkTipoDos [type="checkbox"]:not(:checked),
+.checkTipoDos [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+.checkTipoDos [type="checkbox"]:not(:checked)+.text,
+.checkTipoDos [type="checkbox"]:checked+.text {
+    position: relative;
+    padding-left: 10%;
+    cursor: pointer;
+    padding-top: 11px;
+}
+
+
+/* checkbox aspect */
+
+.checkTipoDos [type="checkbox"]:not(:checked)+.text:before,
+.checkTipoDos [type="checkbox"]:checked+.text:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #0F265C;
+    background: transparent;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+
+/* checked mark aspect */
+
+.checkTipoDos [type="checkbox"]:not(:checked)+.text:after,
+.checkTipoDos [type="checkbox"]:checked+.text:after {
+    content: url(../images/check.png);
+    position: absolute;
+    top: 4px;
+    left: -6px;
+    transition: all .2s;
+    z-index: 1;
+}
+
+
+/* checked mark aspect changes */
+
+.checkTipoDos [type="checkbox"]:not(:checked)+.text:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.checkTipoDos [type="checkbox"]:checked+.text:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* disabled checkbox */
+
+
+
+.checkTipoDos [type="checkbox"]:disabled:checked+.text:after {
+    content: url(../images/check.png);
+    position: absolute;
+    top: 4px;
+    left: -6px;
+    transition: all .2s;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.checkTipoDos [type="checkbox"]:disabled+.text {
+    opacity: 0.5;
+}
+
+
+/* ==================================================
+    Autorizaciones
+================================================== */
+
+
+/* ==================================================
+    BACK-GROUND
+================================================== */
+
+.bg-gracias {
+    width: 100%;
+    height: calc(100% - 16px);
+    background: url(../images/bg-gracias.jpg);
+    background-size: cover;
+    background-position: center top;
+    padding: 23% 0;
+}
+
+.bg-general {
+    width: 100%;
+    height: 600px;
+    background: url(../images/bg-general.jpg);
+    background-size: cover;
+    background-position: center 0px;
+}
+
+
+/* ==================================================
+    BACK-GROUND
+================================================== */
+
+
+/* ==================================================
+    TABS
+================================================== */
+
+.header-tab {
+    width: 100%;
+    padding: 20px 0px 5px 0px;
+    border-bottom: 1px solid #0F265C;
+}
+
+.tab {
+    padding: 0px 45px;
+    display: inline-block;
+    font-family: "PREL-SE";
+    font-size: 14pt;
+    line-height: 14pt;
+    color: #0F265C;
+    cursor: pointer;
+}
+
+.tab .titulo {
+    width: 100%;
+    position: relative;
+}
+
+.sub-line {
+    width: 200px !important;
+    height: 1px;
+    width: 165px;
+    background: #0F265C;
+}
+
+
+/* ==================================================
+    TABS
+================================================== */
+
+
+/* ==================================================
+    Inputs
+================================================== */
+
+label {
+    width: 100%;
+    font-size: 12pt;
+    line-height: 12pt;
+    font-family: "PREL-M";
+    color: #0F265C;
+    padding: 5px 0;
+    margin-bottom: 0;
+    display: block;
+    font-weight: normal;
+}
+
+label span {
+    font-family: "Prelo-Book";
+    color: #666666;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-family: "PREL-M";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #A7A9AC;
+    background: #FFFFFF;
+}
+
+input.mat-input-element {
+    width: 100%;
+    font-family: "PREL-M";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #d5d5d5;
+}
+
+.date-input-field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0px !important;
+}
+
+.date-input-field input {
+    width: 100% !important;
+    margin-top: 0 !important;
+    position: relative;
+    background: #FFFFFF;
+    margin-bottom: 10px !important;
+    font-family: "PREL-M";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #000;
+    border: 1px solid #A7A9AC;
+}
+
+.mat-datepicker-toggle {
+    position: absolute;
+    top: -1px;
+    right: 5px;
+}
+
+.mat-icon-button {
+    color: #FFDD00 !important;
+    vertical-align: middle !important;
+    width: 34px !important;
+    height: 34px !important;
+}
+
+.mat-button-wrapper {
+    height: 34px;
+    display: block;
+}
+
+.mat-button .mat-button-wrapper>*,
+.mat-fab .mat-button-wrapper>*,
+.mat-icon-button .mat-button-wrapper>*,
+.mat-mini-fab .mat-button-wrapper>*,
+.mat-raised-button .mat-button-wrapper>* {
+    margin-top: 6px !important;
+    vertical-align: 0px !important;
+}
+
+.mat-calendar-next-button::after,
+.mat-calendar-previous-button::after {
+    margin: 20px 0 !important;
+    width: 10px;
+    height: 10px;
+}
+
+.mat-calendar-body-today {
+    border-color: #0F265C !important;
+    border-width: 2px;
+    background: transparent !important;
+}
+
+
+
+input::placeholder,
+.date-input-field input::placeholder {
+    font-family: "PREL-M";
+    font-size: 11pt;
+    line-height: 11pt;
+    color: #C9CACC;
+}
+
+::-ms-input-placeholder {
+    font-family: "PREL-M";
+    font-size: 11pt;
+    line-height: 11pt;
+    color: #C9CACC;
+}
+
+:-ms-input-placeholder {
+    font-family: "PREL-M";
+    font-size: 11pt;
+    line-height: 11pt;
+    color: #C9CACC;
+}
+
+
+/*chequeo*/
+
+.msn-sobre {
+    position: relative;
+}
+
+.combo-box.mat-form-field {
+    width: 100% !important;
+    height: auto !important;
+    background: #FFFFFF;
+    font-family: "PREL-M" !important;
+    font-size: 12pt !important;
+    line-height: 12pt !important;
+    color: #000 !important;
+    margin-bottom: 10px !important;
+    padding: 5px !important;
+    border-radius: 3px !important;
+    border: 1px solid #A7A9AC;
+}
+
+.combo-box .mat-select-trigger {
+    padding: 0 !important;
+}
+
+.combo-box .mat-form-field-label-wrapper {
+    top: 0px !important;
+}
+
+.combo-box .mat-input-infix.mat-form-field-infix .mat-form-field-placeholder-wrapper .mat-form-field-placeholder {
+    top: 0px !important;
+}
+
+.combo-box .mat-form-field-underline {
+    display: none !important;
+}
+
+.combo-drop .mat-form-field-underline {
+    display: none !important;
+}
+
+.combo-drop .mat-form-field-label-wrapper {
+    left: 7px;
+    font-family: "PREL-M";
+    font-size: 11pt;
+}
+
+.combo-width-auto .cdk-overlay-pane {
+    width: auto !important;
+}
+
+.combo-drop input {
+    width: 100% !important;
+    margin-top: 0 !important;
+    position: relative;
+    background: #FFFFFF;
+    margin-bottom: 10px !important;
+    font-family: "PREL-M";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #000;
+    border: 1px solid #A7A9AC;
+    padding-right: 31px
+}
+
+.combo-drop::after {
+    content: url(../images/triangulo.png);
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    bottom: 0;
+    background: #FFFFFF;
+    pointer-events: none;
+    height: 21px;
+}
+
+.combo-box .mat-select-value,
+.mat-option-text {
+    font-family: "PREL-M" !important;
+    font-size: 12pt !important;
+    line-height: 12pt !important;
+    color: #000 !important;
+}
+
+.combo-box::after {
+    content: url(../images/triangulo.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 10px;
+    background: #FFFFFF;
+    pointer-events: none;
+    color: rgba(253, 184, 34, 1);
+}
+
+.combo-box {
+    min-height: 32px;
+}
+
+.mat-option {
+    white-space: normal !important;
+    min-height: 48px;
+    height: auto !important;
+}
+
+.select-box.mat-input-invalid {
+    border: 1px solid #e8446c;
+}
+.mat-form-field.mat-form-field-type-mat-select.mat-input-invalid {
+    border: 1px solid #e8446c !important
+}
+
+.mat-form-field.mat-input-invalid {
+    outline: 0px;
+    border: none !important;
+}
+
+.mat-form-field-infix {
+    border-top: 0px !important;
+    padding: 0px !important;
+    padding-top: 2px !important;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: 0!important;
+}
+
+.mat-form-field-type-mat-select .mat-form-field-label {
+    top: -4px !important;
+}
+
+
+/* checkbox aspect */
+
+.multiple-check:not(:checked)+label:before,
+.multiple-check:checked+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #FFDD00;
+    background: #fff;
+    border-radius: 2px;
+}
+
+
+/* checked mark aspect */
+
+.multiple-check:not(:checked)+label:after,
+.multiple-check:checked+label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    line-height: 0.8;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #FFDD00;
+    background: #0F265C;
+    border-radius: 2px;
+    transition: all .2s;
+}
+
+
+/* checked mark aspect changes */
+
+.multiple-check:not(:checked)+label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.multiple-check:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* disabled checkbox */
+
+.multiple-check:disabled:not(:checked)+label:before,
+.multiple-check:disabled:checked+label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+}
+
+.multiple-check:disabled:checked+label:after {
+    color: #999;
+}
+
+.multiple-check:disabled+label {
+    color: #aaa;
+}
+
+
+/*input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    margin-top: 10px;
+    border: 0px !important;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: #e0e1e1;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #FED900;
+    margin-top: -5px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #e0e1e1;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    border-width: 6px 0;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}*/
+
+.mat-slider-horizontal {
+    width: 100%;
+}
+
+.mat-slider-horizontal .mat-slider-wrapper,
+.mat-slider-horizontal .mat-slider-track-wrapper {
+    height: 10px !important;
+}
+
+.mat-slider-wrapper .mat-slider-track-background,
+.mat-slider-horizontal .mat-slider-track-fill {
+    height: 10px !important;
+    background: #e0e1e1;
+    border: none;
+    border-radius: 10px;
+}
+
+.mat-slider-thumb-container .mat-slider-thumb {
+    -webkit-appearance: none !important;
+    height: 30px !important;
+    width: 30px !important;
+    background: #FED900 !important;
+    margin-top: 0px !important;
+    border-radius: 20px !important;
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75) !important;
+}
+
+.mat-slider-horizontal .mat-slider-thumb-container {
+    top: 90% !important;
+}
+
+.mat-accent .mat-slider-thumb,
+.mat-accent .mat-slider-thumb-label,
+.mat-accent .mat-slider-track-fill {
+    background: #ffdd00 !important;
+}
+
+.mat-slider-horizontal .mat-slider-thumb-label {
+    top: -45px !important;
+}
+
+.mat-slider-vertical {
+    height: 300px;
+}
+
+.multiple-check {
+    float: left;
+    width: auto;
+}
+
+
+/* Base for label styling */
+
+.multiple-check:not(:checked),
+.multiple-check:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+.multiple-check:not(:checked)+label,
+.multiple-check:checked+label {
+    position: relative;
+    padding-left: 1.95em;
+    cursor: pointer;
+}
+
+.mat-calendar-body-selected {
+    background-color: #0F265C!important;
+    color: #fff!important;
+}
+
+.mat-calendar-body-today {
+    border-color: #0F265C!important
+}
+
+.mat-icon-button:focus,
+.mat-icon-button:active {
+    background-color: transparent!important;
+}
+
+input[type=file] {
+    display: none;
+}
+
+
+/* ==================================================
+    Inputs
+================================================== */
+
+
+/* ==================================================
+    Child-Inputs
+================================================== */
+
+.caja-autorizacion label {
+    font-family: "Prelo-Light";
+    font-size: 8pt;
+    line-height: 9pt;
+    text-align: justify;
+}
+
+.ops-radio {
+    width: 100%;
+    text-align: center;
+}
+
+.ops-radio label {
+    margin-left: 5px;
+}
+
+.ops-radio label,
+.ops-radio input {
+    width: auto;
+    height: 20px;
+    display: inline-block;
+}
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 36px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+}
+
+.control__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #FFFFFF;
+}
+
+.control--radio .control__indicator {
+    border-radius: 50%;
+    border: 0.5px solid #0F265C;
+}
+
+.control:hover input~.control__indicator,
+.control input:focus~.control__indicator {
+    background: #ccc;
+}
+
+.control input:checked~.control__indicator {
+    background: #0F265C;
+}
+
+.control:hover input:not([disabled]):checked~.control__indicator,
+.control input:checked:focus~.control__indicator {
+    background: #0F265C;
+    opacity: 0.8;
+}
+
+.control input:disabled~.control__indicator {
+    background: #FFFFFF;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control input:disabled~.bg-g {
+    background: #f2f2f2;
+}
+
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked~.control__indicator:after {
+    display: block;
+}
+
+.control--checkbox .control__indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled~.control__indicator:after {
+    border-color: #7b7b7b;
+}
+
+.control--radio .control__indicator:after {
+    left: 50%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.control--radio input:disabled~.control__indicator:after {
+    background: #7b7b7b;
+}
+
+
+/* ==================================================
+    Child-Inputs
+================================================== */
+
+
+/* ==================================================
+    Errores
+================================================== */
+
+.general-error {
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.general-error .msn {
+    width: 95%;
+    font-family: "Prelo-Book";
+    font-size: 8pt;
+    line-height: 8pt;
+    padding-bottom: 10px;
+    position: relative;
+    display: block;
+    color: #000000;
+}
+
+.error {
+    color: #e8446c !important;
+    margin-top: -10px;
+}
+
+.txt-center .icon-adven,
+.txt-center .icon-error {
+    display: inline-block;
+}
+
+.txt-center .msn {
+    width: auto;
+}
+
+.fooMensaje {
+    font-size: 8pt;
+    line-height: 8pt;
+    color: #bfbfbf !important;
+}
+
+
+/* ==================================================
+    Errores
+================================================== */
+
+
+/* ==================================================
+    Progreso-Pasos
+================================================== */
+
+.contenedor-bar {
+    width: 100%;
+}
+
+.progressbar {
+    counter-reset: step;
+}
+
+.progressbar li {
+    list-style: none;
+    display: inline-block;
+    width: 32.5%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    font-family: "PREL-SE";
+    font-size: 11pt;
+    line-height: 11px;
+    color: #0F265C;
+}
+
+.progressbar .DosElementos {
+    width: 49.5%;
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #fafafa;
+    border: 1px solid #d5d5d5;
+    font-family: "PREL-SE";
+    font-size: 16pt;
+    line-height: 55px;
+}
+
+.progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 25px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar li.activeted {
+    color: #0F265C;
+}
+
+.progressbar li.activeted:before {
+    background: #FFDD00;
+    border: transparent;
+}
+
+.progressbar li.activeted:after {
+    background-color: #FFDD00;
+}
+
+.progressbar li.pased:before {
+    background: #FFDD00;
+}
+
+.progressbar .datosContactos:before {
+    background-image: url(../images/icon-pasos-uno.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.progressbar .ocupacion:before {
+    background-image: url(../images/icon-pasos-dos.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.progressbar .referencias:before {
+    background-image: url(../images/icon-pasos-tres.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.progressbar .tarjeta:before {
+    background-image: url(../images/icon-pasos-cuatro.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.progressbar .desembolso:before {
+    background-image: url(../images/icon-pasos-cinco.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/* ==================================================
+    Progreso-Pasos
+================================================== */
+
+
+/* ==================================================
+    Clases Generales
+================================================== */
+
+.page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.p-o {
+    padding: 0px !important;
+}
+
+.w-auto {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.desactivo {
+    opacity: 0.5;
+}
+
+.w-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.center-div {
+    margin: 0 auto;
+}
+
+.tool {
+    font-size: 9px;
+    font-family: "ARI";
+    color: #60524F;
+    position: absolute;
+    bottom: -2px;
+    right: 15px;
+    display: block;
+}
+
+.icon-reloj:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    background: url(../images/reloj.png);
+    width: 27px;
+    height: 27px;
+}
+
+.dis-in-ipad-mov,
+.dis-in-mov {
+    display: none;
+}
+
+.ima-auto img {
+    width: 100%;
+}
+
+strong {
+    font-family: "ARI-B";
+}
+
+.posi-abs {
+    position: absolute;
+}
+
+.flot-left-bnt {
+    float: left
+}
+
+.flot-right-bnt {
+    float: right;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+.txt-right {
+    text-align: right
+}
+
+.pad-top-bot-20 {
+    padding: 20px 0;
+}
+
+.pad-top-20 {
+    padding-top: 20px;
+}
+
+.pad-bot-20 {
+    padding-bottom: 20px;
+}
+
+.pad-top-bot-40 {
+    padding: 40px 0;
+}
+
+.pad-top-40 {
+    padding-top: 40px;
+}
+
+.pad-bot-40 {
+    padding-bottom: 40px;
+}
+
+.pad-top-bot-60 {
+    padding: 60px 0;
+}
+
+.pad-top-60 {
+    padding-top: 60px;
+}
+
+.pad-bot-60 {
+    padding-bottom: 60px;
+}
+
+.pad-top-bot-80 {
+    padding: 80px 0;
+}
+
+.pad-top-80 {
+    padding-top: 80px;
+}
+
+.pad-bot-80 {
+    padding-bottom: 80px;
+}
+
+.mar-top-bot-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mar-top-20 {
+    margin-top: 20px;
+}
+
+.mar-top-25 {
+    margin-top: 25px;
+}
+
+.mar-bot-20 {
+    margin-bottom: 20px;
+}
+
+.mar-top-bot-40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.mar-top-40 {
+    margin-top: 40px;
+}
+
+.mar-bot-40 {
+    margin-bottom: 40px;
+}
+
+.mar-top-bot-60 {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.mar-top-60 {
+    margin-top: 60px;
+}
+
+.mar-bot-60 {
+    margin-bottom: 60px;
+}
+
+.mar-top-bot-80 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.mar-top-80 {
+    margin-top: 80px;
+}
+
+.mar-bot-80 {
+    margin-bottom: 80px;
+}
+
+.pad-lef-20 {
+    padding-left: 20px;
+}
+
+.pad-lef-25p {
+    padding-left: 25% !important;
+}
+
+.mar-lef-20 {
+    margin-left: 20px;
+}
+
+.pad-lef-40 {
+    padding-left: 40px;
+}
+
+.mar-lef-40 {
+    margin-left: 40px;
+}
+
+.pad-lef-60 {
+    padding-left: 60px;
+}
+
+.mar-lef-60 {
+    margin-left: 60px;
+}
+
+.down-bar {
+    width: 100%;
+}
+
+.degree-one {
+    width: 10%;
+    height: 11px;
+    float: left;
+    background: rgba(214, 171, 41, 1);
+    background: -moz-linear-gradient(left, rgba(214, 171, 41, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(214, 171, 41, 1)), color-stop(100%, rgba(252, 182, 32, 1)));
+    background: -webkit-linear-gradient(left, rgba(214, 171, 41, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -o-linear-gradient(left, rgba(214, 171, 41, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(214, 171, 41, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: linear-gradient(to right, rgba(214, 171, 41, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d6ab29', endColorstr='#fcb620', GradientType=1);
+}
+
+.degree-two {
+    width: 30%;
+    height: 11px;
+    float: left;
+    background: rgba(252, 216, 38, 1);
+    background: -moz-linear-gradient(left, rgba(252, 216, 38, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(252, 216, 38, 1)), color-stop(100%, rgba(252, 182, 32, 1)));
+    background: -webkit-linear-gradient(left, rgba(252, 216, 38, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -o-linear-gradient(left, rgba(252, 216, 38, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(252, 216, 38, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: linear-gradient(to right, rgba(252, 216, 38, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcd826', endColorstr='#fcb620', GradientType=1);
+}
+
+.degree-three {
+    width: 60%;
+    height: 11px;
+    float: left;
+    background: rgba(254, 228, 79, 1);
+    background: -moz-linear-gradient(left, rgba(254, 228, 79, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(254, 228, 79, 1)), color-stop(100%, rgba(252, 182, 32, 1)));
+    background: -webkit-linear-gradient(left, rgba(254, 228, 79, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -o-linear-gradient(left, rgba(254, 228, 79, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(254, 228, 79, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    background: linear-gradient(to right, rgba(254, 228, 79, 1) 0%, rgba(252, 182, 32, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fee44f', endColorstr='#fcb620', GradientType=1);
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+.w-cuatro {
+    width: 24% !important;
+}
+
+.bloque-txt-xs {
+    width: 100%;
+    font-family: "ARI";
+    color: #000;
+    font-size: 9pt;
+    line-height: 10pt;
+}
+
+.clean {
+    clear: both;
+}
+
+.bloqueo {
+    opacity: 0.3;
+}
+
+.color-gris {
+    color: #666666;
+    font-family: "Prelo-Book";
+}
+
+.mat-focused .mat-form-field-label,
+.mat-form-field-invalid .mat-form-field-label {
+    color: rgba(0, 0, 0, .54) !important;
+}
+
+.border-error {
+    border: 1px solid #e8446c;
+}
+
+.print {
+    font-family: "Prelo-Book";
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #0c2760;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+/* ==================================================
+    Clases Generales
+================================================== */
+
+
+/* ==================================================
+    Animaciones
+================================================== */
+
+.fadeIn {
+    transition: opacity 700ms;
+    -webkit-animation: fadein 1s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 1s;
+    /* Internet Explorer */
+    -o-animation: fadein 1s;
+    /* Opera < 12.1 */
+    animation: fadein 1s;
+}
+
+
+/* ==================================================
+    Animaciones
+================================================== */
+
+
+.dialog-confirmacion-panel {
+  background: #fff;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12);
+  border-bottom-left-radius: 15px;
+}
+
+.dialog-confirmacion-btn {
+  width: 80px;
+  height: 30px;
+  font-size: 12pt;
+  padding: 0px 0 0px 0;
+  margin-top: 5px;
+}
+.dialog-confirmacion-content {
+	padding: 0 24px 24px 24px !important;
+}
+
+
+.editar {
+	width: 25px;
+	height: 25px;
+    background: url(../images/icon-editar.png) no-repeat;
+    background-size: 25px 25px;
+    cursor: pointer;
+}
+.eliminar {
+	width: 25px;
+	height: 25px;
+	background: url(../images/icon-eliminar.png) no-repeat;
+	background-size: 25px 25px;
+    cursor: pointer;
+}
+
+.overflow-x-auto {
+	overflow-x: auto;
+}
+
+.icon-pdf {
+  width: 35px;
+  height: 35px;
+  background: url(../images/icon-pdf.png) no-repeat;
+  background-size: 35px 35px;
+  cursor: pointer;
+}
+
+.icon-search {
+    width: 35px;
+    height: 35px;
+    background: url(../images/icon-search.png) no-repeat;
+    background-size: 35px 35px;
+    cursor: pointer;
+  }
+
+.information-panel {
+  box-sizing: border-box;
+  box-shadow: none;
+  border: 2px solid transparent;
+  border-bottom-left-radius: 15px;
+  border-color: #d5d5d5;
+  background: #fff;
+  width: 100%;
+}
+
+.information-panel-ul {
+  list-style: none;
+  font-size: 13px;
+  padding: 10px 0 0 10px;
+}
+
+.mat-select-disabled .mat-select-value {
+    color: rgba(0,0,0,.38) !important;
+}
+
+
+/* ==================================================
+    RAKHI
+================================================== */
+.contenedor-cabecera{
+    height: 60px;
+    background-color: #FFFfff;
+    right: 0;
+    -webkit-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.contenedor-titulo {
+    color: #0F265C;
+    font-family: "Swis721 BlkCn BT";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+.contenedor-busqueda {
+    margin-left: auto;
+    white-space: nowrap;
+    padding-right: 15px;
+}
+
+.contenedor-principal {
+    background-color: #FFFFFF;
+
+}
+
+.contenedor-recuadro {
+    width: 100%;
+}
+
+.primera-linea{
+    padding-top: 15px;
+}
+
+.ultima-linea{
+    padding-bottom: 25px;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+
+
+.boton-amarillo-small {
+    width: 150px;
+    background-image: url('../images/button-bg.svg');
+    background-repeat: no-repeat;
+    padding: 15px 0 10px 0;
+    background-color: #FEDA32;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    line-height: 16px;
+    border: 0px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-amarillo-small:hover {
+    width: 150px;
+    background-image: url('../images/button-bg.svg');
+    background-repeat: no-repeat;
+    padding: 15px 0 10px 0;
+    background-color: #FED230;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    line-height: 16px;
+    border: 0px solid transparent;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-cancelar {
+    width: 150px;
+    padding: 15px 0 10px 0;
+    background-color: white;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    border: 2px solid #FEE598;
+    line-height: 14.5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.boton-cancelar:hover {
+    width: 150px;
+    padding: 15px 0 10px 0;
+    background-color: #F8F8F8;
+    font-family: "PREL-M";
+    font-weight: normal;
+    font-size: 14pt;
+    text-align: center;
+    color: #002561;
+    border: 2px solid #FEE598;
+    line-height: 14.5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.tabla-fila {
+    border: 1px solid #DCDCDC;
+    background-color: #FFFFFF;
+    border-left: 7px solid #FEDA32;
+    text-decoration: none;
+    color: #002561;
+}
+
+
+
+.search .search-icon {
+    color: #C2CCD6;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    padding-right: 6px;
+}
+
+.tabla-columna-boton{
+    display: inline-block;
+    padding-left: 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contenedor-pie{
+    height: 50px;
+    border: 1px solid #DCDCDC;
+    background-color: #EFEFEF;
+}
+
+.contenedor-pie.container.text-center {
+    padding-top: 3px;
+}
+
+.container-pie-top{
+    padding-top: 3px;
+}
+
+.check-invalid-class.mat-form-field.mat-input-invalid {
+    outline: 0px;
+    border: 1px solid red !important;
+  }

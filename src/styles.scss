@@ -1,0 +1,108 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+.page {
+  padding-top: 90px;
+}
+.cajas-inputs {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  border-bottom-left-radius: 15px;
+}
+
+.boton-amarillo {
+  width: 250px;
+  padding: 15px 0 10px 0;
+  background-color: #39fe32;
+  font-family: "PREL-M";
+  font-weight: normal;
+  font-size: 14pt;
+  text-align: center;
+  color: #002561;
+  line-height: 20px;
+  border: 0px solid transparent;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.pad-top-bot-40 {
+  padding: 40px 0;
+}
+
+/* ==================================================
+    Errores
+================================================== */
+
+.general-error {
+  width: 100%;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.general-error .msn {
+  width: 95%;
+  font-family: "Prelo-Book";
+  font-size: 8pt;
+  line-height: 8pt;
+  padding-bottom: 10px;
+  position: relative;
+  display: block;
+  color: #000000;
+}
+
+.error {
+  color: #e8446c !important;
+  margin-top: -10px;
+}
+
+.txt-center .icon-adven,
+.txt-center .icon-error {
+  display: inline-block;
+}
+
+.txt-center .msn {
+  width: auto;
+}
+
+.fooMensaje {
+  font-size: 8pt;
+  line-height: 8pt;
+  color: #bfbfbf !important;
+}
+
+// from group
+.bp-form-group {
+  input:focus {
+      ~.image-wrapper {
+          height: 201px;
+          padding: 10px;
+          transition: all 0.5s;
+          overflow: hidden;
+      }
+  }
+  .image-wrapper {
+      display: block!important;
+      height: 0px;
+      overflow: hidden;
+      height: 0px;
+      &.showExample {
+          height: 201px;
+          transition: all 0.5s;
+          overflow: hidden;
+      }
+  }
+}
+button:disabled {
+  opacity: 0.6;
+}
+
+

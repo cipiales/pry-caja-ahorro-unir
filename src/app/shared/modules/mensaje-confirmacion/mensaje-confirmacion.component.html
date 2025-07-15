@@ -1,0 +1,40 @@
+<!--<div class="mx-0">
+  <div class="{{tipoMensaje}} msnShow mensaje">
+    <div fxFlex="35"><mat-icon class="mx-3">{{icon}}</mat-icon>
+    </div>
+    <div fxFlex="35" >{{mensaje}}</div>
+    <div fxFlex="35" >
+      <button mat-icon-button (click)="cerrar()">
+      <mat-icon>close</mat-icon>
+      </button>
+  </div>
+  </div>
+</div>-->
+
+<!--<div  >
+  <div class="{{tipoMensaje}} mensaje alert my-3 col-11 col-sm-5 mx-0" >
+    <div   style="border: 1px solid rgb(77, 40, 146);">
+      <mat-icon class="mx-3 my-1" style="border: 1px solid rgb(77, 40, 146);">{{icon}}</mat-icon>       
+
+    </div>
+    <div   style="border: 1px solid rgb(77, 40, 146);">      
+      {{mensaje}}
+    </div>
+    <div  style="border: 1px solid rgb(77, 40, 146);">
+      <button mat-icon-button (click)="cerrar()" >
+        <mat-icon class="mx-3">close</mat-icon>
+        </button>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="lg:w-10/12 md:w-10/12 w-11/12">
+  <div class="mb-2 mensaje w-full  {{tipoMensaje}} msnShow">
+    <mat-icon class="mr-3">{{icon}}</mat-icon>
+    <div class="mx-2">{{mensaje}}</div>
+    <button mat-icon-button (click)="cerrar()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</div>

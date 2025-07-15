@@ -1,0 +1,5 @@
+<div *ngIf="messageService.messages.length">
+    <div class="general-error caja-error" *ngFor='let message of messageService.messages'>
+        <span class="msn" [innerHTML]="message"></span>
+    </div>
+</div>
