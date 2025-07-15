@@ -1,4 +1,4 @@
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -33,7 +33,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatProgressBarModule,
     MatGridListModule,
     MatCardModule,
-    FlexLayoutModule.withConfig({addFlexToParent: false}),
+
     MatDividerModule,
     MensajeConfirmacionModule,
    // MaterialFileInputModule,

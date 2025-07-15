@@ -1,5 +1,4 @@
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArchivoClienteRoutingModule } from './archivo-cliente-routing.module';
@@ -27,11 +26,10 @@ import { MensajeConfirmacionModule } from '../../../shared/modules/mensaje-confi
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    FormsModule,
     MatProgressBarModule,
     MatGridListModule,
     MatCardModule,
-    FlexLayoutModule.withConfig({addFlexToParent: false}),
+
     MatDividerModule,
     MensajeConfirmacionModule,
     MatTooltipModule,

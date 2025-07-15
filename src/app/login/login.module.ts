@@ -12,7 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 import { ErrorMessageComponent } from '../modules/comon/error-message/error-message.component';
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ErrorMessageComponent } from '../modules/comon/error-message/error-mess
         MatInputModule,
         MatCheckboxModule,
         MatButtonModule,
-       FlexLayoutModule.withConfig({addFlexToParent: false}),
+
         MatFormFieldModule,
         FormsModule,
 
