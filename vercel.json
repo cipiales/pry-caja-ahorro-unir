@@ -1,9 +1,7 @@
 {
   "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "outputDirectory": "dist/pry-caja-ahorro-unir",
-  "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "outputDirectory": "dist/pry-caja-ahorro-unir/browser",
+  "framework": null
+
 }
 
