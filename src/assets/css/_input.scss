@@ -1,0 +1,35 @@
+input.ng-invalid,
+textarea.ng-invalid,
+select.ng-invalid,
+.mat-form-field.mat-input-invalid {
+    outline: 0px;
+    border: 1px solid $primary-color-error;
+}
+
+input.ng-untouched,
+textarea.ng-untouched {
+    border: 1px solid #A7A9AC;
+}
+
+input,
+textarea {
+    width: 100%;
+    font-family: $primary-font;
+    font-size: 12pt;
+    line-height: 12pt;
+    color: #000;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #A7A9AC;
+    background: #FFFFFF;
+}
+
+.form-validacion input.ng-invalid,
+textarea.ng-invalid {
+    border: 1px solid red;
+}
+
+.form-validacion .combo-box.ng-invalid {
+    border: 1px solid red;
+}

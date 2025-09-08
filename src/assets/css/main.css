@@ -371,11 +371,15 @@ header {
 }
 
 .cajas-inputs {
-    width: 100%;
-    background: #FFFFFF;
-    border: 1px solid #e5e5e5;
-    padding: 20px;
-    border-bottom-left-radius: 15px;
+padding: 40px 30px;      /* reduje un poco para que no se vea gigante */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 50%;              /* ocupa la mitad del ancho disponible */
+  max-width: 400px;        /* nunca se va a extender más de 400px */
+  background: #fff;        /* opcional: para que resalte como card */
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .caja-requisitos {
@@ -1233,7 +1237,7 @@ input.mat-input-element {
 }
 
 .date-input-field {
-    width: 100%;
+    width: 50%;
     position: relative;
     margin-bottom: 0px !important;
 }
@@ -1253,7 +1257,7 @@ input.mat-input-element {
 
 .mat-datepicker-toggle {
     position: absolute;
-    top: -1px;
+    top: -6px;
     right: 5px;
 }
 

@@ -1,108 +1,119 @@
+/* ===========================
+   Global Styles & Imports
+   =========================== */
+@use '@angular/material' as mat;
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "assets/css/_variable.scss";
+@import "assets/css/_input.scss";
+@import "assets/css/_button.scss";
+@import "assets/css/_main.scss";
+//@import '~@fortawesome/fontawesome-free/css/all.min.css';
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
 
-.page {
-  padding-top: 90px;
+/* ===========================
+   Angular Material Theme
+   =========================== */
+
+// Paletas de colores (equivalentes a v16)
+$my-app-primary: mat.m2-define-palette(mat.$m2-blue-grey-palette);
+$my-app-accent: mat.m2-define-palette(mat.$m2-pink-palette, 500, 900, A100);
+$my-app-warn: mat.m2-define-palette(mat.$m2-deep-orange-palette);
+
+// Tema principal (light)
+$my-app-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $my-app-primary,
+    accent: $my-app-accent,
+    warn: $my-app-warn,
+  )
+));
+
+// Aplica tema completo (componentes + colores)
+@include mat.all-component-themes($my-app-theme);
+
+/* ===========================
+   Tema alternativo
+   =========================== */
+.alternate-theme {
+  $alternate-primary: mat.m2-define-palette(mat.$m2-light-blue-palette);
+  $alternate-accent: mat.m2-define-palette(mat.$m2-yellow-palette, 400);
+
+  $alternate-theme: mat.m2-define-light-theme((
+    color: (
+      primary: $alternate-primary,
+      accent: $alternate-accent,
+    )
+  ));
+
+  // Solo colores (para aplicar dinámicamente)
+  @include mat.all-component-colors($alternate-theme);
 }
-.cajas-inputs {
-  width: 100%;
-  background: #FFFFFF;
-  border: 1px solid #e5e5e5;
-  padding: 20px;
-  border-bottom-left-radius: 15px;
-}
 
-.boton-amarillo {
-  width: 250px;
-  padding: 15px 0 10px 0;
-  background-color: #39fe32;
-  font-family: "PREL-M";
-  font-weight: normal;
-  font-size: 14pt;
-  text-align: center;
-  color: #002561;
-  line-height: 20px;
-  border: 0px solid transparent;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  margin: 0 auto;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  transition: 0.5s all;
-  cursor: pointer;
-}
-.pad-top-bot-40 {
-  padding: 40px 0;
-}
 
-/* ==================================================
-    Errores
-================================================== */
 
-.general-error {
-  width: 100%;
+p {
+  margin: 0;
   padding: 0;
-  margin-top: 5px;
+  font-size: $label-size-normal;
 }
 
-.general-error .msn {
-  width: 95%;
-  font-family: "Prelo-Book";
-  font-size: 8pt;
-  line-height: 8pt;
-  padding-bottom: 10px;
-  position: relative;
-  display: block;
-  color: #000000;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.error {
-  color: #e8446c !important;
-  margin-top: -10px;
+.date-picker .mat-form-field-suffix .mat-icon-button {
+  color: $primary-color !important;
 }
 
-.txt-center .icon-adven,
-.txt-center .icon-error {
-  display: inline-block;
+/* Asegura que body y html ocupen todo */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.txt-center .msn {
-  width: auto;
+.main-container {
+  position: absolute;
+  top: 64px;        /* altura del topnav */
+  left: 250px;      /* ancho del sidebar */
+  right: 0;
+  bottom: 0;
+
+  padding: 20px;
+  background-color: #f8f8f8;
+  background-image: url('/assets/images/bg.svg');
+  background-size: cover;
+  overflow: auto;
+
+  /* 👇 evita bloquear overlays */
+  z-index: 0;
 }
 
-.fooMensaje {
-  font-size: 8pt;
-  line-height: 8pt;
-  color: #bfbfbf !important;
-}
-
-// from group
-.bp-form-group {
-  input:focus {
-      ~.image-wrapper {
-          height: 201px;
-          padding: 10px;
-          transition: all 0.5s;
-          overflow: hidden;
-      }
-  }
-  .image-wrapper {
-      display: block!important;
-      height: 0px;
-      overflow: hidden;
-      height: 0px;
-      &.showExample {
-          height: 201px;
-          transition: all 0.5s;
-          overflow: hidden;
-      }
-  }
-}
-button:disabled {
-  opacity: 0.6;
+/* Asegura que el contenedor del overlay quede sobre el layout */
+.cdk-overlay-container, .cdk-overlay-pane {
+  position: fixed !important;
+  z-index: 2000 !important; /* más alto que sidebar, topnav, main-container */
 }
 
 
+.mat-calendar-table-header {
+  display: table-header-group; /* Asegura que el header se comporte como tal */
+}
+
+.mat-calendar-table-header th {
+  font-size: 10px !important;       /* ligeramente más grande para legibilidad */
+  font-weight: 500 !important;
+  padding: 4px 0 !important;        /* ajusta padding vertical */
+  white-space: nowrap !important;
+  text-align: center !important;
+  width: 14.28% !important;         /* Fuerza ancho fijo por 7 días */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Asegura distribución uniforme de columnas */
+.mat-calendar-table {
+  table-layout: fixed !important;
+  width: 100% !important;
+}
