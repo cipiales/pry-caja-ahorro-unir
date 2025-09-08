@@ -1,0 +1,60 @@
+<div class="container">
+  <!-- Sección de búsqueda -->
+  <div class="busqueda">
+    <h4>Busqueda </h4>
+    <form [formGroup]="formBusqueda" novalidate>
+      <div class="criterios">
+
+
+<mat-radio-group  aria-labelledby="example-radio-group-label" class="radio-column" name="tipoParticipante"formControlName="criterio"
+>
+  <mat-radio-button value="todos" (click)="onClickCriterio('todos')">Todos</mat-radio-button>
+  <mat-radio-button value="fechaTransaccion" (click)="onClickCriterio('fechaTransaccion')">Fecha Transacción</mat-radio-button>
+    <mat-radio-button value="numeroSemana" (click)="onClickCriterio('numeroSemana')">Número Semana</mat-radio-button>
+    <mat-radio-button value="ciclo" (click)="onClickCriterio('ciclo')">Ciclo</mat-radio-button>
+</mat-radio-group>
+
+
+      </div>
+
+      <input type="text" formControlName="valor" placeholder="Ingrese valor..."  />
+       <div class="general-error my-3" *ngIf="formBusqueda.controls['valor'].invalid">
+              <span class="msn error">{{getErrorMessage("valor")}}</span>
+      </div>
+
+      <button type="submit" (click)="buscarTransaccionesFormulario()">Buscar</button>
+    </form>
+  </div>
+
+  <!-- Sección de resultados -->
+  <div class="resultados">
+    <h4>Resultados</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Código Caja Ahorro</th>
+          <th>Código Ciclo</th>
+          <th>Fecha Inicio Ciclo</th>
+          <th>Fecha Fin Ciclo</th>
+          <th>Número Semana</th>
+          <th>Fecha Transacción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of resultados">
+          <td>{{ t.cicloDTO.id.codigoCajaAhorro }}</td>
+          <td>{{ t.cicloDTO.id.codigoCiclo }}</td>
+          <td>{{ t.cicloDTO.fechaInicio }}</td>
+          <td>{{ t.cicloDTO.fechaFin }}</td>
+          <td>{{ t.numeroTransaccionCajaAhorro }}</td>
+         <td>
+          <a [routerLink]="['/transacciones/transacciones/crear-transaccion', t.id.secuencialTransaccionCajaAhorro]">
+            {{ t.fechaTransaccionCajaAhorro | date:'yyyy-MM-dd' }}
+          </a>
+        </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

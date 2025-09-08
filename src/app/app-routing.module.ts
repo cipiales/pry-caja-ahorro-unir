@@ -16,9 +16,13 @@ const routes: Routes = [
   {
     //path: 'login',
     //loadChildren: './login/login.module#LoginModule'
-    path: 'compracartera',loadChildren: () => import('./modules/layout.module').then((m) => m.LayoutModule),
+    path: 'cuenta',loadChildren: () => import('./modules/layout.module').then((m) => m.LayoutModule),
   },
-
+{
+    //path: 'login',
+    //loadChildren: './login/login.module#LoginModule'
+    path: 'transacciones',loadChildren: () => import('./modules/layout.module').then((m) => m.LayoutModule),
+  },
   {
     //path: 'login',
     //loadChildren: './login/login.module#LoginModule'

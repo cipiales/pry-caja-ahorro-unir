@@ -4,28 +4,34 @@
     <h4>Busqueda </h4>
     <form [formGroup]="formBusqueda" novalidate>
       <div class="criterios">
-        <label><input type="radio" formControlName="criterio" value="Todos" (click)="onClickCriterio()" > Todos</label>
-        <label><input type="radio" formControlName="criterio" value="NumeroCuenta" (click)="onClickCriterio()"> Nº Cuenta</label>
-        <label><input type="radio" formControlName="criterio" value="Cedula" (click)="onClickCriterio()"> Cédula</label>
+
+<mat-radio-group  aria-labelledby="example-radio-group-label" class="radio-column" name="tipoParticipante"formControlName="criterio"
+>
+  <mat-radio-button value="Todos" (click)="onClickCriterio('Todos')">Todos</mat-radio-button>
+  <mat-radio-button value="NumeroCuenta" (click)="onClickCriterio('NumeroCuenta')">NumeroCuenta</mat-radio-button>
+    <mat-radio-button value="Cedula" (click)="onClickCriterio('Cedula')">Cedula</mat-radio-button>
+</mat-radio-group>
         <label for="estado">Estado</label>
-
-              <select
-              class="form-control"
-              [formControl]="formBusqueda.controls['estado']"
-              name="estado"
-            >
-              <option value="">--Ninguno--</option>
-              <option value="ACT">Activo</option>
-              <option value="INA">Inactivo</option>
-
-              </select>
-
+<div class="select-wrapper">
+  <select
+    class="form-control"
+    [formControl]="formBusqueda.controls['estado']"
+    name="estado"
+  >
+    <option value="">--Ninguno--</option>
+    <option value="ACT">Activo</option>
+    <option value="INA">Inactivo</option>
+  </select>
+</div>
       </div>
+<div style="margin-top: 10px;">
+      <input type="text" formControlName="valor" placeholder="Ingrese valor..."  />
 
-      <input type="text" formControlName="valor" placeholder="Ingrese valor..." />
+
        <div class="general-error my-3" *ngIf="formBusqueda.controls['valor'].invalid">
               <span class="msn error">{{getErrorMessage("valor")}}</span>
       </div>
+</div>
 
       <button type="submit" (click)="buscarCuentasFormulario()">Buscar</button>
     </form>
@@ -47,14 +53,18 @@
       <tbody>
         <tr *ngFor="let c of resultados">
           <td>{{ c.codigoCuenta }}</td>
-          <td>{{ c.socio.cedulaIdentidad }}</td>
+          <td>
+            <a [routerLink]="['/detalle-socio', c.socio.cedulaIdentidad]">
+      {{ c.socio.cedulaIdentidad }}
+    </a>
+          </td>
           <td>{{ c.socio.nombreCompleto }}</td>
           <td>{{ c.codigoCajaAhorro }}</td>
           <td>
-            <span [ngClass]="c.estado === 'ACT' ? 'activo' : 'inactivo'">
-              {{ c.estado }}
-            </span>
-          </td>
+          <span [ngClass]="c.estado === 'ACT' ? 'activo' : 'inactivo'">
+            {{ c.estado === 'ACT' ? 'Activo' : 'Inactivo' }}
+          </span>
+        </td>
 
         </tr>
       </tbody>

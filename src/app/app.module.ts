@@ -17,26 +17,15 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient,HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { MessageService } from './shared/services/message-services/message.service';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { CommonModule } from '@angular/common';
 
-
-/*@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }*/
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+CommonModule,
     MatListModule,
     MatCardModule,
     MatFormFieldModule,

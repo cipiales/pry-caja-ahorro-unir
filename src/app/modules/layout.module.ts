@@ -1,6 +1,7 @@
+
 //import { FormsModule } from './forms/forms.module';
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +23,13 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { NavComponent } from './nav/nav.component';
 
+import { LoginModule } from '../login/login.module';
+
+
+
+
+
+
 
 
 @NgModule({
@@ -37,9 +45,24 @@ import { NavComponent } from './nav/nav.component';
         MatListModule,
        // TranslateModule,
         MatBadgeModule,
-        MatExpansionModule
+        MatExpansionModule,
        // FormsModule
+       LoginModule,
+
+
     ],
-    declarations: [LayoutComponent, NavComponent,SidebarComponent,TopnavComponent]
+    providers:[
+
+    ],
+    declarations: [LayoutComponent, NavComponent,SidebarComponent,TopnavComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      exports:[]
+
+
 })
 export class LayoutModule {}
+
+
+
+
+

@@ -8,19 +8,24 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-         
+
             {
               path: 'dashboard',loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
             },
             {
-              path: 'archivocliente',loadChildren: () => import('./gestionararchivos/archivocliente/archivo-cliente.module').then((m) => m.ArchivoClienteModule),
+              path: 'crear',loadChildren: () => import('./administracion/cuenta/cuenta.module').then((m) => m.CuentaModule),
             },
             {
-              path: 'archivooperaciones',loadChildren: () => import('./gestionararchivos/archivooperaciones/archivo-operaciones.module').then((m) => m.ArchivoOperacionesModule),
+              path: 'archivooperaciones',loadChildren: () => import('./administracion/cuenta/cuenta.module').then((m) => m.CuentaModule),
             },
-         
-          
-           
+            {
+              path: 'transacciones',loadChildren: () => import('./transaccion/transaccion-caja-ahorro/transaccion-caja-ahorro.module').then((m) => m.TransaccionCajaAhorroModule),
+            }
+
+
+
+
+
         ]
     }
 ];

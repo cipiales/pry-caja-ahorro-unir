@@ -26,7 +26,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HasAnyAuthorityDirective } from '../../shared/auth/has-any-authority.directive';
 import { AutofocusDirective } from '../../shared/directives/autofocus.directive';
-import { MatSelect } from "@angular/material/select";
+import { MatRadioModule } from '@angular/material/radio';
+
+import { MatSelectModule } from '@angular/material/select';
+
 
 @NgModule({
     imports: [
@@ -48,6 +51,9 @@ import { MatSelect } from "@angular/material/select";
     ReactiveFormsModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatRadioModule,
+    MatSelectModule
+
 
 ],
 

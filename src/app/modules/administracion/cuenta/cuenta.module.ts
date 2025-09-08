@@ -1,8 +1,9 @@
 
-import { NgModule } from '@angular/core';
+
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ArchivoClienteRoutingModule } from './archivo-cliente-routing.module';
-import { ArchivoClienteComponent } from './archivo-cliente.component';
+import { CuentaRoutingModule } from './cuenta-routing.module';
+import { CuentaComponent } from './cuenta.component';
 import { MatButtonModule } from '@angular/material/button';
 import {  MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,10 +18,14 @@ import { MatTableModule } from '@angular/material/table'
 
 //import { MensajeConfirmacionModule } from '../../shared/modules//mensaje-confirmacion/mensaje-confirmacion.module';
 import { MensajeConfirmacionModule } from '../../../shared/modules/mensaje-confirmacion/mensaje-confirmacion.module';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ErrorMessageComponent } from '../../comon/error-message/error-message.component';
+
 
 @NgModule({
   imports: [
-    ArchivoClienteRoutingModule,
+    CuentaRoutingModule,
     CommonModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -33,9 +38,14 @@ import { MensajeConfirmacionModule } from '../../../shared/modules/mensaje-confi
     MatDividerModule,
     MensajeConfirmacionModule,
     MatTooltipModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+
 ],
-  declarations: [ArchivoClienteComponent],
-  exports: [ArchivoClienteComponent]
+
+  declarations: [CuentaComponent,ErrorMessageComponent],
+   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [CuentaComponent]
 })
-export class ArchivoClienteModule {}
+export class CuentaModule {}

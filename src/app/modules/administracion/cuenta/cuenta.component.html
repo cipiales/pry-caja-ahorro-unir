@@ -1,0 +1,125 @@
+<!-- FORMULARIO DE BÚSQUEDA -->
+<div *ngIf="mostrarFormularioBusqueda" novalidate>
+  <h2 class="titulo-formulario">Registro de Cuenta</h2>
+  <form [formGroup]="formularioBusqueda" >
+    <div class="formulario-grid">
+      <div class="columna">
+        <div class="form-row">
+          <label>Cédula Identidad:</label>
+          <input  type="text"  formControlName="cedulaIdentidadBusqueda"   name="cedulaIdentidadBusqueda" required/>
+
+
+           <div class="general-error my-3" *ngIf="formularioBusqueda.controls['cedulaIdentidadBusqueda'].invalid">
+              <span class="msn error">{{getErrorMessage("cedulaIdentidadBusqueda")}}</span>
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="columna">
+        <div class="form-row">
+
+        </div>
+      </div>
+    </div>
+    <button type="submit" (click)="buscarCliente()">Buscar</button>
+
+  </form>
+</div>
+
+<!-- FORMULARIO DE DATOS -->
+<div *ngIf="mostrarFormularioDatos" novalidate>
+  <h2 class="titulo-formulario">Datos personales</h2>
+  <form [formGroup]="formularioDatos" >
+    <div class="formulario-grid">
+      <!-- Columna 1 -->
+      <div class="columna">
+        <div class="form-row">
+          <label>Cédula Identidad:</label>
+          <!--<input formControlName="cedulaIdentidad" />-->
+          {{cedulaIdentidadBusqueda}}
+        </div>
+        <div class="form-row">
+          <label>Primer Nombre*:</label>
+          <input formControlName="primerNombre" name="primerNombre"/>
+
+           <div class="error" *ngIf="formularioDatos.controls['primerNombre'].invalid">
+              <span class="msn error">{{getErrorMessage1("primerNombre")}}</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Primer Apellido*:</label>
+          <input formControlName="primerApellido" />
+           <div class="error" *ngIf="formularioDatos.controls['primerApellido'].invalid">
+              <span class="msn error">{{getErrorMessage1("primerApellido")}}</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Dirección*:</label>
+          <input formControlName="direccion" />
+          <div class="error" *ngIf="formularioDatos.controls['direccion'].invalid">
+              <span class="msn error">{{getErrorMessage1("direccion")}}</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Teléfono Celular:</label>
+          <input formControlName="telefonoCelular" />
+           <div class="error" *ngIf="formularioDatos.controls['telefonoCelular'].invalid">
+              <span class="msn error">{{getErrorMessage1("sexo")}}</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Sexo:</label>
+          <select formControlName="sexo">
+            <option value="">Seleccione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+          <div class="error" *ngIf="formularioDatos.controls['sexo'].invalid">
+              <span class="msn error">{{getErrorMessage1("sexo")}}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="columna">
+        <div class="form-row">
+          <label>Acciones*:</label>
+          <input formControlName="acciones" />
+          <div class="error" *ngIf="formularioDatos.controls['acciones'].invalid">
+              <span class="msn error">{{
+                ("acciones")}}</span>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Segundo Nombre:</label>
+          <input formControlName="segundoNombre" />
+        </div>
+        <div class="form-row">
+          <label>Segundo Apellido:</label>
+          <input formControlName="segundoApellido" />
+        </div>
+        <div class="form-row">
+          <label>Teléfono Convencional:</label>
+          <input formControlName="telefonoConvencional" />
+           <div class="error" *ngIf="formularioDatos.controls['telefonoConvencional'].invalid">
+               <span class="msn error">{{getErrorMessage1("telefonoConvencional")}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" (click)="guardar()">Guardar</button>
+
+  </form>
+
+
+
+</div>
+  <sca-error-message></sca-error-message>
+
+
+
+
+

@@ -1,0 +1,195 @@
+  <div *ngIf="validarEdicion">
+  <form [formGroup]="formularioBusqueda" >
+	<div class="row">
+      <div class="col">
+          <div class="row">
+            <div class="bp-form-group col-8">
+              <label for="empresaReferidora">Fecha Transacción</label>
+            </div>
+            <div class="bp-form-group col-8">
+			      <div class="date-input-field">
+              <input
+                type="text"
+                [formControl]="formularioBusqueda.controls['fechaTransaccionCajaAhorro']"
+                name="fechaTransaccionCajaAhorro"
+
+                autocomplete="off"
+                value="fechaTransaccionCajaAhorro"
+                [matDatepicker]="pickerFTCA"
+
+
+              />
+
+              <mat-datepicker-toggle matSuffix [for]="pickerFTCA"  >
+              </mat-datepicker-toggle>
+            <mat-datepicker #pickerFTCA>
+            </mat-datepicker>
+
+
+
+             <div class="general-error my-3" *ngIf="formularioBusqueda.controls['fechaTransaccionCajaAhorro'].invalid">
+              <span class="msn error">{{getErrorMessage("fechaTransaccionCajaAhorro")}}</span>
+          </div>
+          </div>
+
+            </div>
+          </div>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+
+<div class="row">
+      <div class="col">
+
+            <div class="bp-form-group col-8" >
+                      <button class="boton-amarillo"  type="submit" [disabled]="formularioBusqueda.invalid"  (click)="aceptarFechaTransaccion()" >
+                      Aceptar
+                      <div class="trig-uno"></div>
+                      <div class="trig-dos"></div>
+
+                  </button>
+            </div>
+
+      </div>
+      <div class="col">
+
+
+      </div>
+</div>
+
+
+
+
+    <div class="row">
+          <div class="bp-form-group col-8">
+
+          </div>
+          <div class="bp-form-group col-8">
+
+          </div>
+    </div>
+	</form>
+ </div>
+
+   <div *ngIf="!validarEdicion">
+
+  <!--TABLA DE TRANSACCIONES-->
+  <div class="transaccion-container">
+  <h2>Listado Semanal Caja Ahorro</h2>
+
+  <!-- Tabla -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Acciones -->
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">{{ element.acciones }}</td>
+    </ng-container>
+
+    <!-- Asistencia -->
+    <ng-container matColumnDef="asistencia">
+      <th mat-header-cell *matHeaderCellDef>Asistencia</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-icon *ngIf="element.asistencia" color="primary">check_circle</mat-icon>
+        <mat-icon *ngIf="!element.asistencia" color="warn">cancel</mat-icon>
+      </td>
+    </ng-container>
+
+    <!-- Número de Cuenta -->
+    <ng-container matColumnDef="nroCuenta">
+      <th mat-header-cell *matHeaderCellDef>Nro Cuenta</th>
+      <td mat-cell *matCellDef="let element">{{ element.cuenta.codigoCuenta }}</td>
+    </ng-container>
+
+    <!-- Tiene Crédito -->
+    <ng-container matColumnDef="tieneCredito">
+      <th mat-header-cell *matHeaderCellDef>Tiene Crédito</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox [(ngModel)]="element.tieneCredito" disabled></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Solicitud Crédito -->
+    <ng-container matColumnDef="solicitudCredito">
+      <th mat-header-cell *matHeaderCellDef>Solicitud Crédito</th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox [(ngModel)]="element.solicitudCredito"></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Nombre Socio -->
+    <ng-container matColumnDef="nombreSocio">
+      <th mat-header-cell *matHeaderCellDef>Nombre Socio</th>
+      <td mat-cell *matCellDef="let element">{{ element.cuenta.socio.nombreCompleto }}</td>
+    </ng-container>
+
+    <!-- Ahorro -->
+    <ng-container matColumnDef="ahorro">
+      <th mat-header-cell *matHeaderCellDef>Ahorro</th>
+      <td mat-cell *matCellDef="let element">
+        <input matInput type="number" [(ngModel)]="element.ahorro" (ngModelChange)="calcularTotales()" />
+      </td>
+    </ng-container>
+
+    <!-- Fondo Reserva -->
+    <ng-container matColumnDef="fondoReserva">
+      <th mat-header-cell *matHeaderCellDef>Fondo Reserva</th>
+      <td mat-cell *matCellDef="let element">
+        <input matInput type="number" [(ngModel)]="element.fondoReserva" (ngModelChange)="calcularTotales()" />
+      </td>
+    </ng-container>
+
+    <!-- Pago Acciones -->
+    <ng-container matColumnDef="pagoAcciones">
+      <th mat-header-cell *matHeaderCellDef>Pago Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <input matInput type="number" [(ngModel)]="element.pagoAcciones" (ngModelChange)="calcularTotales()" />
+      </td>
+    </ng-container>
+
+    <!-- Pago Crédito -->
+    <ng-container matColumnDef="pagoCredito">
+      <th mat-header-cell *matHeaderCellDef>Pago Crédito</th>
+      <td mat-cell *matCellDef="let element">
+        <input matInput type="number" [(ngModel)]="element.pagoCredito" (ngModelChange)="calcularTotales()" />
+      </td>
+    </ng-container>
+
+    <!-- Pago Interés -->
+    <ng-container matColumnDef="pagoInteres">
+      <th mat-header-cell *matHeaderCellDef>Pago Interés</th>
+      <td mat-cell *matCellDef="let element">
+        <input matInput type="number" [(ngModel)]="element.pagoInteres" (ngModelChange)="calcularTotales()" />
+      </td>
+    </ng-container>
+
+    <!-- Acción -->
+    <ng-container matColumnDef="accion">
+      <th mat-header-cell *matHeaderCellDef>Acción</th>
+      <td mat-cell *matCellDef="let element">
+        <a class="editar" (click)="editarFila(element)">Editar</a>
+      </td>
+    </ng-container>
+
+    <!-- Header & Row -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Totales -->
+  <div class="totales">
+    <h3>Datos Totales Caja Ahorro</h3>
+    <p>Ahorro Total: {{ totales.ahorro }}</p>
+    <p>Fondo Reserva Total: {{ totales.fondoReserva }}</p>
+    <p>Pago Créditos Total: {{ totales.pagoCredito }}</p>
+    <p>Pago Interés: {{ totales.pagoInteres }}</p>
+    <p>Pago Acciones: {{ totales.pagoAcciones }}</p>
+    <p><strong>Saldo Total Caja Ahorro: {{ totales.saldo }}</strong></p>
+  </div>
+</div>
+</div>
+
+
+

@@ -1,8 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 //import {FormBuilder, FormGroup} from '@angular/forms';
 import {SelectionModel} from '@angular/cdk/collections';
-import {ChoresService} from '../../services/chores/chores.service';
-import {ChoreInterface} from '../../services/chores/choreInterface';
+
 //import {NotifierComponent} from '../../components/notifier/notifier.component';
 //import {MatSnackBar} from '@angular/material/snack-bar';
 //import {MatDialog} from '@angular/material/dialog';
@@ -11,9 +10,12 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EXP_REGULARES } from '../../shared/exp-regulares/exp-regulares';
-import { CuentasService } from '../../services/cuentas.service';
-import { Cuenta } from '../../shared/model/cuenta';
+import { EXP_REGULARES } from '../../../shared/exp-regulares/exp-regulares';
+import { Cuenta } from '../../../shared/model/cuenta';
+import { CuentasService } from '../../../services/cuentas.service';
+import { Transaccion } from '../../../shared/model/transaccion';
+import { TransaccionesService } from '../../../services/transacciones.service';
+
 
 
 
@@ -21,57 +23,58 @@ import { Cuenta } from '../../shared/model/cuenta';
 
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.scss']
+    selector: 'app-transaccion-caja-ahorro',
+    templateUrl: './transaccion-caja-ahorro.component.html',
+    styleUrls: ['./transaccion-caja-ahorro.component.scss']
 })
 
 
-export class DashboardComponent implements OnInit , AfterViewInit{
+export class TransaccionCajaAhorroComponent implements OnInit {
 
   doClean = false;
   searchError: string | null = null;
-  chores: ChoreInterface[] = [];
+
   selectedType: string | null = null;
   headers: string[] = ['id', 'description', 'status'];
-  selection = new SelectionModel<ChoreInterface>(true, []);
-  dataSource: MatTableDataSource<ChoreInterface>;
+
 
   @ViewChild(MatPaginator, {static: false}) paginator!: MatPaginator;
 
   @ViewChild(MatSort, {static: false})
 
   set sort(value: MatSort) {
-    this.dataSource.sort = value;
+    //this.dataSource.sort = value;
   }
 
 
     busquedaForm: FormGroup;
     formBusqueda: FormGroup;/////
 
-      cuentas: Cuenta[] = [];
+    transacciones: Transaccion[] = [];
 
 
-  resultados: Cuenta[] = [];
+  resultados: Transaccion[] = [];
 
 
-    constructor(private fb: FormBuilder,private choresService: ChoresService,private constructorBusquedaForm: FormBuilder,private cuentasService:CuentasService) {
-      this.dataSource = new MatTableDataSource(this.chores);
+    constructor(private fb: FormBuilder,private constructorBusquedaForm: FormBuilder,private transaccioneService:TransaccionesService) {
+
 
       this.busquedaForm = this.constructorBusquedaForm.group({
-      numeroCuenta: ["", [Validators.pattern("^[0-9]*$")]],
-      cedulaIdentidad: [ "",[Validators.pattern(EXP_REGULARES.SOLO_DIGITOS),],],
-      NombreCompleto: ["",[Validators.pattern(EXP_REGULARES.SOLO_TEXTO),],],
-      estado: ["",[Validators.pattern(EXP_REGULARES.SOLO_TEXTO),],],
+      fechaTransaccion: ["", [Validators.pattern("^[0-9]*$")]],
+      numeroSemana: [ "",[Validators.pattern(EXP_REGULARES.SOLO_DIGITOS),],],
+      ciclo: ["",[Validators.pattern(EXP_REGULARES.SOLO_TEXTO),],],
+
 
     });
 
-     this.formBusqueda = this.fb.group(
+    this.formBusqueda = this.fb.group(
       {
-      criterio: ['Todos'],
+      criterio: ['todos'],
       valor: [''],
       estado:['']
     });
+
+
 
     }
 
@@ -81,60 +84,12 @@ export class DashboardComponent implements OnInit , AfterViewInit{
 
     }
 
-    ngAfterViewInit(): void {
-      console.log("Llega hasta aqui chores");
-      this.choresService.getChores().subscribe(
-        (data) => {
-          this.chores = data;
-          this.dataSource = new MatTableDataSource(this.chores);
-        }
-      );
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-    }
 
-    applyFilter(event: Event): void {
-      const filterValue = (event.target as HTMLInputElement).value;
-      console.log('filterValue', filterValue);
-      this.dataSource.filter = filterValue.trim().toLowerCase();
-      if (this.dataSource.paginator) {
-        this.dataSource.paginator.firstPage();
-      }
-    }
 
-    clean(clean: boolean): void {
-      this.doClean = clean;
-      this.searchError = null;
-      this.chores = [];
-      this.selection.clear();
-    }
 
-    /** Whether the number of selected elements matches the total number of rows. */
-    isAllSelected(): boolean {
-      const numSelected = this.selection.selected.length;
-      const numRows = this.chores.length;
-      return numSelected === numRows;
-    }
 
-    /** Selects all rows if they are not all selected; otherwise clear selection. */
-    // tslint:disable-next-line:typedef
-    masterToggle() {
-      if (this.isAllSelected()) {
-        this.selection.clear();
-        return;
-      }
-      this.selection.select(...this.chores);
-    }
 
-    /** The label for the checkbox on the passed row */
-    checkboxLabel(row?: ChoreInterface): string {
-      if (!row) {
-        return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
-      }
-      return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row `;
-    }
-
-  buscarCuentas(estado:string,cedulaIdentidad:string,cuenta:string,codigoCajaAhorro:string) {
+  buscarTransacciones(fechaTransaccion:string,numeroSemana:string,ciclo:string) {
 
 
 
@@ -145,8 +100,8 @@ export class DashboardComponent implements OnInit , AfterViewInit{
     //this.dataSourceHistoria = new MatTableDataSource([]);
 
 
-    this.cuentasService
-      .obtenerCuentas(estado,cedulaIdentidad,cuenta,codigoCajaAhorro)
+    this.transaccioneService
+      .obtenerTransacciones(fechaTransaccion,numeroSemana,ciclo)
       .subscribe(
         (respuesta) => {
           console.log('Respuesta Historia...:'+ respuesta);
@@ -185,8 +140,7 @@ export class DashboardComponent implements OnInit , AfterViewInit{
       );
   }
 
-  buscarCuentasFormulario() {
-
+  buscarTransaccionesFormulario() {
     let criterio = this.formBusqueda.get("criterio").value;
     console.log("criterio:"+criterio);
     let valor = this.formBusqueda.get("valor").value;
@@ -194,15 +148,17 @@ export class DashboardComponent implements OnInit , AfterViewInit{
     let estado = this.formBusqueda.get("estado").value;
     console.log("estado:"+estado);
 
-    if (criterio === 'Todos') {
-       this.buscarCuentas(null,null,null,"CAJA01");
-    } else if  (criterio === 'NumeroCuenta') {
+    if (criterio === 'todos') {
+       this.buscarTransacciones(null,null,null);
+    } else if  (criterio === 'fechaTransaccion') {
 
+      this.buscarTransacciones(valor,null,null);
 
-      this.buscarCuentas(null,null,valor,"CAJA01");
+    } else if  (criterio === 'numeroSemana') {
+      this.buscarTransacciones(null,valor,null);
 
-    } else if  (criterio === 'Cedula') {
-      this.buscarCuentas(null,valor,null,"CAJA01");
+    } else if  (criterio === 'ciclo') {
+      this.buscarTransacciones(null,null,valor);
 
     }
   }
@@ -227,16 +183,79 @@ export class DashboardComponent implements OnInit , AfterViewInit{
       this.formBusqueda.get("valor").setValidators(
         null
       );
-    } if (opcion === 'NumeroCuenta') {
+    } if (opcion === 'fechaTransaccion') {
       this.formBusqueda.get("valor").setValidators(
         [Validators.required, Validators.pattern(EXP_REGULARES.SOLO_NUMEROS), Validators.maxLength(12), Validators.minLength(4)]
       );
-    } if (opcion === 'Cedula') {
+    } if (opcion === 'numeroSemana') {
+      this.formBusqueda.get("valor").setValidators(
+        [Validators.required, Validators.pattern(EXP_REGULARES.SOLO_NUMEROS), Validators.maxLength(10), Validators.minLength(10)]
+      );
+    } if (opcion === 'ciclo') {
       this.formBusqueda.get("valor").setValidators(
         [Validators.required, Validators.pattern(EXP_REGULARES.SOLO_NUMEROS), Validators.maxLength(10), Validators.minLength(10)]
       );
     }
     this.formBusqueda.get("valor").updateValueAndValidity();
+  }
+
+  verDetalle(secuencialDetalleTransacionCajaAhorro:string)  {
+
+           console.log('secuencialDetalleTransacionCajaAhorro...:'+ secuencialDetalleTransacionCajaAhorro);
+
+
+
+
+
+
+  //this.appComponent.abrirProgreso();
+  //  this.isErrorInServiceHistoria = "";
+    //this.dataSourceHistoria = new MatTableDataSource([]);
+
+
+    this.transaccioneService
+      .obtenerDetaleTransacciones(secuencialDetalleTransacionCajaAhorro,null)
+      .subscribe(
+        (respuesta) => {
+          console.log('Respuesta...:'+ respuesta);
+          if (respuesta) {
+
+
+
+            this.resultados = respuesta;
+            //this.clientesHistoria = respuesta.detalles;
+           /* this.dataSourceHistoria = new MatTableDataSource(
+              this.clientesHistoria
+            );*/
+            setTimeout(() => {
+
+             // this.tamanoClientesHistoria = this.clientesHistoria.length;
+              //this.dataSourceHistoria.paginator = this.paginatorHistorico;
+              //this.dataSourceHistoria.sort = this.sortHistorico;
+              /*if (this.tamanoClientesHistoria == 0) {
+                let mensaje = "La búsqueda de historial de búsqueda no generó resultados";
+                this.msjErrorConsultaHistoria = mensaje;
+                this.mostrarMsjErrorConsultaHistoria = true;
+                this.existeRegistrosHistoria = false;
+                this.tamanoClientesHistoria = null;
+              } else {
+                this.existeRegistrosHistoria = true;
+              }*/
+            }, 500);
+            //this.mostrarMsjErrorConsultaHistoria = false;
+          } else {
+            //this.isErrorInService = respuesta.error.mensajeError;
+          }
+         // this.appComponent.cerrarProgreso();
+        },
+        (err) => {
+
+         // this.appComponent.cerrarProgreso();
+        }
+      );
+
+
+
   }
 
 

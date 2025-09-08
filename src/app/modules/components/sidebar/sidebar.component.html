@@ -1,6 +1,10 @@
+
+
 <div id="sidebar" >
   <mat-nav-list>
     <br />
+    <br />
+
     <ng-container *ngFor="let menu of menus">
       <a *ngIf="!menu.menutitle"  mat-list-item [routerLinkActive]="'active-link'" [routerLink]="['/' + menu.routerlink]">
         {{ menu.routerText }}
@@ -19,9 +23,32 @@
             </div>
           </mat-expansion-panel-header>
 
-          <a *ngFor="let submenu of menu.submenus" mat-list-item [routerLinkActive]="'active-link'" [routerLink]="['/' + submenu.routerlink]">
-            {{ submenu.routerText  }}
-          </a>
+
+          <ng-container *ngFor="let submenu of menu.submenus">
+  <mat-accordion *ngIf="submenu.submenus">
+    <mat-expansion-panel [class.mat-elevation-z0]="true" dense [expanded]="ifActiveRoute(submenu.submenus)">
+      <mat-expansion-panel-header>
+        <div [className]="ifActiveRoute(submenu.submenus) ? 'expansion-panel-bold' : ''">
+          {{ submenu.menutitle }}
+        </div>
+      </mat-expansion-panel-header>
+      <a *ngFor="let subsubmenu of submenu.submenus"
+         mat-list-item
+         [routerLinkActive]="'active-link'"
+         [routerLink]="['/' + subsubmenu.routerlink]">
+         {{ subsubmenu.routerText }}
+      </a>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <a *ngIf="!submenu.submenus"
+     mat-list-item
+     [routerLinkActive]="'active-link'"
+     [routerLink]="['/' + submenu.routerlink]">
+     {{ submenu.routerText }}
+  </a>
+</ng-container>
+
 
         </mat-expansion-panel>
       </mat-accordion>

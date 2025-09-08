@@ -9,9 +9,16 @@ import { MessageService } from '../../../shared/services/message-services/messag
 })
 export class ErrorMessageComponent implements OnInit {
 
-  constructor(public messageService: MessageService) {}
+  constructor(public messageService: MessageService) {
+
+
+  }
 
   ngOnInit() {
+
+
   }
 
 }
+
+

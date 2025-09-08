@@ -1,0 +1,36 @@
+.transaccion-container {
+  padding: 20px;
+
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+
+  td {
+    input {
+      width: 80px;
+    }
+
+    .editar {
+      color: red;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .totales {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+}

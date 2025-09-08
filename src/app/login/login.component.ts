@@ -6,6 +6,8 @@ import { AuthService } from "../../app/services/auth.service";
 import { MessageService } from '../shared/services/message-services/message.service';
 import { AuthenticationService } from '../services/authentication.service';
 import { first } from 'rxjs/operators';
+import { AppComponent } from '../app.component';
+import { ERROR_MESSAGE_APP } from '../shared/constants/error-messaje-app';
 
 @Component({
     selector: 'app-login',
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
    message: string = '';
 
 
-    constructor( private route: ActivatedRoute,private router: Router,private authService:AuthService,private messageService: MessageService,private authenticationService: AuthenticationService) {
+    constructor( private route: ActivatedRoute,private router: Router,private authService:AuthService,private messageService: MessageService,private authenticationService: AuthenticationService,private appComponent: AppComponent) {
     }
 
     ngOnInit() {
@@ -43,12 +45,15 @@ export class LoginComponent implements OnInit {
       this.redirectToHome();
     }*/
     private redirectToHome() {
-      this.router.navigate(['/compracartera/dashboard']);
+      this.router.navigate(['/cuenta/dashboard']);
     }
 
 
 
 onSubmit() {
+
+  this.appComponent.abrirProgreso();
+
         this.authenticationService.login(this.usuario,this.clave)
             .pipe(first())
             .subscribe({
@@ -60,9 +65,12 @@ onSubmit() {
                     this.redirectToHome();
                 },
                 error: error => {
-                  console.log("Error al Loguearse"+ error)
+                  //console.log("Error al Loguearse"+ error)
+
+                    this.messageService.add(ERROR_MESSAGE_APP.MENSAJE_ERROR_SISTEMA,"warning");
                     //this.error = error;
                     //this.loading = false;
+                     this.appComponent.cerrarProgreso();
                 }
             });
     }
@@ -138,9 +146,18 @@ onSubmit() {
    * login form minimum length validation.
    * @param {object} nomCampo-Form object
    */
-  losCamposNoSonCorrectos(nomCampo){
+  validacionMinlenght(nomCampo){
+
     return nomCampo.errors != null && nomCampo.hasError('minlength');
   }
+
+    validacionMaxlenght(nomCampo){
+    return nomCampo.errors != null && nomCampo.hasError('maxlength');
+  }
+   validacionSoloLetras(nomCampo){
+    return nomCampo.errors != null && nomCampo.hasError('pattern');
+  }
+
   validarReseteo() {}
 
 }

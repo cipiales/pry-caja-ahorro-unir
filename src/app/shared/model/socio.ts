@@ -1,12 +1,4 @@
-export class Cuenta {
-  codigoCuenta: string;
-  codigoCajaAhorro: string;
-  estado: string;
-   usuarioRegistro: string;
-  fechaRegistro: string;
-
-
-  socio: {
+export class Socio {
            cedulaIdentidad: string;
             direccion: string;
             estado: string;
@@ -19,7 +11,7 @@ export class Cuenta {
             telefonoCelular: string;
             telefonoConvencional: string;
             codigoSocio: string;
-
-  }
+            usuarioRegistro: string;
+            fechaRegistro: string;
 
 }

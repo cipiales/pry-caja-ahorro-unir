@@ -1,5 +1,13 @@
-<div *ngIf="messageService.messages.length">
-    <div class="general-error caja-error" *ngFor='let message of messageService.messages'>
-        <span class="msn" [innerHTML]="message"></span>
-    </div>
+<div *ngIf="messageService.messages.length" style="padding-top: 15px;">
+  <div
+    class="general-message"
+    *ngFor="let message of messageService.messages"
+    [ngClass]="{
+      'error-message': message.type === 'error',
+      'warning-message': message.type === 'warning',
+      'success-message': message.type === 'success'
+      }"
+  >
+    <span class="msn" [innerHTML]="message.text"></span>
+  </div>
 </div>

@@ -13,33 +13,30 @@
     </div>
                     <div class="row">
                       <label for="nomUsuario">Usuario</label>
-                      <input autofocus id="nomUsuario" [disabled]="!browserSupport"  name="nomUsuario" [(ngModel)]="usuario" #nomUsuario="ngModel" maxlength="30" minlength="2" onPaste="return false" placeholder="Usuario" autocomplete="off" required>
+                      <input autofocus id="nomUsuario" [disabled]="!browserSupport"  name="nomUsuario" [(ngModel)]="usuario" #nomUsuario="ngModel" maxlength="30" minlength="4" onPaste="return false" placeholder="Usuario" autocomplete="off" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*">
                     </div>
                     <div class="general-error my-3" *ngIf="validacionDeCampo(nomUsuario)">
                       <span class="msn error" *ngIf="campoObligatorio(nomUsuario)">Campo obligatorio</span>
-                      <span class="msn error" *ngIf="losCamposNoSonCorrectos(nomUsuario)">Los datos ingresados son incorrectos</span>
+                      <span class="msn error" *ngIf="validacionMinlenght(nomUsuario)">El campo admite minimo 4 de caracteres</span>
+                      <span class="msn error" *ngIf="validacionMaxlenght(nomUsuario)">El campo admite máximo 30 de caracteres</span>
+                       <span class="msn error" *ngIf="validacionSoloLetras(nomUsuario)">El campo admite solo letras</span>
                     </div>
                       <div class="row">
                         <label for="contrasena">Contraseña</label>
-                        <input id="contrasena"  [disabled]="!browserSupport" type="password" [(ngModel)]="clave" #contrasena="ngModel" name="contrasena" maxlength="30" minlength="2" onPaste="return false" placeholder="Contraseña" autocomplete="off" required>
+                        <input id="contrasena"  [disabled]="!browserSupport" type="password" [(ngModel)]="clave" #contrasena="ngModel" name="contrasena" maxlength="30" minlength="5" onPaste="return false" placeholder="Contraseña" autocomplete="off" required pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*">
                         <div class="general-error my-3" *ngIf="validacionDeCampo(contrasena)">
                             <span class="msn error" *ngIf="campoObligatorio(contrasena)">Campo obligatorio</span>
+                              <span class="msn error" *ngIf="validacionMinlenght(contrasena)">El campo admite minimo 5 de caracteres</span>
+                      <span class="msn error" *ngIf="validacionMaxlenght(contrasena)">El campo admite máximo 30 de caracteres</span>
+                      <span class="msn error" *ngIf="validacionSoloLetras(contrasena)">El campo admite solo letras</span>
 
                         </div>
 
                       </div>
-
-
-
-                  </div>
-              </div>
-          </div>
-          <div class="row pad-bot-40">
+                          <div class="row pad-bot-40">
               <div class="col-xs-10 col-md-10 col-lg-8 col-xl-6 offset-xs-1 offset-md-1 offset-lg-2 offset-xl-3">
                  <sca-error-message></sca-error-message>
-                  <div class="general-error caja-adver" *ngIf="!browserSupport">
-                      <span class="msn">Navegador no compatible con la aplicación, ingresar con versión actualizada de Google Chrome o Internet Explorer 11</span>
-                  </div>
+
                   <button class="boton-amarillo" type="submit" [disabled]="iniciarSesionForm.invalid" >
                       Ingresar
                       <div class="trig-uno"></div>
@@ -47,6 +44,13 @@
                   </button>
               </div>
           </div>
+
+
+
+                  </div>
+              </div>
+          </div>
+
       </form>
       <!--<via-footer></via-footer>-->
   </div>

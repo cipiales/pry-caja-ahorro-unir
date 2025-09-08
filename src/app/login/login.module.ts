@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 //import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -14,7 +14,8 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
 
-import { ErrorMessageComponent } from '../modules/comon/error-message/error-message.component';
+
+
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { ErrorMessageComponent } from '../modules/comon/error-message/error-mess
 
     ],
     providers:[provideHttpClient()],
-    declarations: [LoginComponent,ErrorMessageComponent]
+    declarations: [LoginComponent],
+     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })
 export class LoginModule {}

@@ -18,7 +18,9 @@ export const EXP_REGULARES = {
     VALOR_FINAL_HUELLA: new RegExp(/^[a-zA-Z]{1}\d{4}[a-zA-Z]{1}\d{0,4}$/),
     VALOR_FINAL_MAIL: new RegExp(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/),
     VALOR_FINAL_OTP: new RegExp(/^\d{6}$/),
-    FECHA_FORMATO : new RegExp(/^\d{4}[\/.]\d{1,2}[\/.]\d{1,2}$/),
+    FECHA_FORMATO : new RegExp(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/),
+
+
     // custom
     TWO_DECIMAL_POINT : new RegExp(/^\d*\.?\d{0,1}$/),
     DECIMAL_POINT : new RegExp(/^\d*\.?\d{0,2}$/),
