@@ -137,7 +137,7 @@ validarEdicion:boolean;
   }
 
 
-  aceptarFechaTransaccion(){
+  aceptarFechaTransaccion() {
 
   }
 

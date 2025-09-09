@@ -98,6 +98,32 @@ export const ParametrosConfig = {
               }
             }
           }
+        },
+        cuerpoCrearTransaccion: {
+          metodoCrearTransaccion: {
+            'cuerpo_http': {
+              "targetMethod":"POST",
+              "body":{
+                  "secuencialTransaccionCajaAhorro":null,
+                  "codigoCiclo":null,
+                  "codigoCajaAhorro":null,
+                  "fechafechaTransaccionCajaAhorroRegistro":null,
+                  "transaccionAhorroTotal":null,
+                  "transaccionFondoReservaTotal":null,
+                  "transaccionCreditoTotal":null,
+                  "pagoInteresTotal":null,
+                  "pagoAccionesTotal":null,
+                  "estado":null,
+                  "numeroTransaccionCajaAhorro":null,
+                  "saldoTotalCajaAhorro":null,
+                  "saldoTotalTransaccionCajaAhorro":null,
+                  "fechaRegistro":null,
+                  "usuarioRegistro":null,
+
+
+              }
+            }
+          }
         }
 
 

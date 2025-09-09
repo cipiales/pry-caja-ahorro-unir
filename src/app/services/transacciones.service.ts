@@ -12,6 +12,7 @@ import { Cuenta } from '../shared/model/cuenta';
 
 const cuerpoTransacciones = ParametrosConfig.cuerpoTransacciones;
 const cuerpoDetalleTransacciones = ParametrosConfig.cuerpoDetalleTransacciones;
+const cuerpoCrearTransaccion = ParametrosConfig.cuerpoTransacciones;
 
 
 @Injectable({ providedIn: 'root' })
